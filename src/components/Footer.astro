@@ -1,0 +1,44 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-border py-8">
+  <div class="container">
+    <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+      <!-- Brand -->
+      <div class="flex items-center gap-2">
+        <span class="font-serif text-lg font-semibold text-primary">
+          Epic Itineraries
+        </span>
+        <span class="text-brand-coral">.</span>
+      </div>
+
+      <!-- Links -->
+      <nav class="flex flex-wrap items-center justify-center gap-6 text-sm">
+        <a
+          href="/privacy"
+          class="text-muted-foreground transition-colors hover:text-foreground"
+        >
+          Privacy Policy
+        </a>
+        <a
+          href="/terms"
+          class="text-muted-foreground transition-colors hover:text-foreground"
+        >
+          Terms of Service
+        </a>
+        <a
+          href="mailto:hello@epic-itineraries.com"
+          class="text-muted-foreground transition-colors hover:text-foreground"
+        >
+          Contact
+        </a>
+      </nav>
+
+      <!-- Copyright -->
+      <p class="text-sm text-muted-foreground">
+        &copy; {currentYear} Epic Itineraries
+      </p>
+    </div>
+  </div>
+</footer>

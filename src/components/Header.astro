@@ -1,0 +1,29 @@
+---
+const appUrl = 'https://my.epic-itineraries.com/login';
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container flex h-16 items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="font-serif text-xl font-semibold text-primary">
+        Epic Itineraries
+      </span>
+      <span class="text-brand-coral text-xl font-bold">.</span>
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a
+        href={appUrl}
+        class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+      >
+        Log in
+      </a>
+      <a
+        href={appUrl}
+        class="inline-flex h-10 items-center justify-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-brand-green-light"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</header>

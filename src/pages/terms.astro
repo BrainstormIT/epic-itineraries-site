@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Terms of Service | Epic Itineraries"
+  description="Terms of service for Epic Itineraries — the rules and guidelines for using our platform."
+>
+  <Header />
+  <main class="flex-1">
+    <div class="container max-w-3xl py-12">
+      <h1 class="font-serif text-4xl font-normal italic text-primary mb-8">
+        Terms of Service
+      </h1>
+
+      <div class="max-w-none">
+        <p class="text-lg text-muted-foreground mb-8">
+          Last updated: January 2026
+        </p>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Acceptance of Terms</h2>
+          <p class="text-muted-foreground">
+            By accessing or using Epic Itineraries, you agree to be bound by these Terms of
+            Service. If you do not agree to these terms, please do not use our service.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Description of Service</h2>
+          <p class="text-muted-foreground">
+            Epic Itineraries is a travel research platform that allows you to save, organise,
+            and curate travel content from across the web. We provide tools to help you plan
+            your adventures.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">User Accounts</h2>
+          <ul class="list-disc list-inside space-y-2 text-muted-foreground">
+            <li>You must provide accurate information when creating an account</li>
+            <li>You are responsible for maintaining the security of your account</li>
+            <li>You must not share your account credentials with others</li>
+            <li>You must be at least 13 years old to use this service</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Acceptable Use</h2>
+          <p class="text-muted-foreground mb-4">
+            You agree not to use Epic Itineraries to:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-muted-foreground">
+            <li>Violate any applicable laws or regulations</li>
+            <li>Infringe on the intellectual property rights of others</li>
+            <li>Upload malicious content or attempt to compromise our systems</li>
+            <li>Harass, abuse, or harm other users</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Intellectual Property</h2>
+          <p class="text-muted-foreground">
+            You retain ownership of content you create. By using our service, you grant us a
+            limited licence to store and display your content as necessary to provide the
+            service.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Limitation of Liability</h2>
+          <p class="text-muted-foreground">
+            Epic Itineraries is provided &ldquo;as is&rdquo; without warranties of any kind. We are not
+            liable for any damages arising from your use of the service.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Changes to Terms</h2>
+          <p class="text-muted-foreground">
+            We may update these terms from time to time. Continued use of the service after
+            changes constitutes acceptance of the new terms.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+          <p class="text-muted-foreground">
+            If you have questions about these Terms, please contact us at
+            <a
+              href="mailto:hello@epic-itineraries.com"
+              class="text-primary hover:underline"
+            >
+              hello@epic-itineraries.com
+            </a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
