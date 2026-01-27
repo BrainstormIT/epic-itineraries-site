@@ -2,39 +2,64 @@
 const appUrl = 'https://my.epic-itineraries.com/login';
 ---
 
-<section class="container flex flex-col items-center justify-center py-20 text-center md:py-32">
-  <div class="inline-flex items-center gap-2 rounded-full bg-brand-cream-dark px-4 py-1.5 text-sm text-primary mb-8 animate-on-scroll">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
-      <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-      <path d="M20 3v4"></path>
-      <path d="M22 5h-4"></path>
-    </svg>
-    <span>Now live &mdash; free to use</span>
+<section class="relative min-h-[100svh] flex items-end overflow-hidden">
+  <!-- Background image -->
+  <img
+    src="/images/hero-mountain-landscape.png"
+    alt=""
+    role="presentation"
+    class="absolute inset-0 h-full w-full object-cover object-center"
+    loading="eager"
+    fetchpriority="high"
+  />
+
+  <!-- Gradient overlays -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 container pb-24 pt-40 md:pb-32">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-4 py-1.5 text-sm text-white mb-8 animate-on-scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+          <path d="M20 3v4"></path>
+          <path d="M22 5h-4"></path>
+        </svg>
+        <span>Free to use &mdash; start in seconds</span>
+      </div>
+
+      <h1 class="font-serif text-4xl font-normal italic leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl animate-on-scroll">
+        Collect inspiration.<br />
+        Generate adventure.
+      </h1>
+
+      <p class="mt-8 max-w-2xl text-lg text-white/80 md:text-xl animate-on-scroll">
+        Discover the web&rsquo;s best travel stories and distil them into your
+        perfect plan. Browse hand-picked guides, save what resonates, and let AI
+        build your epic adventure.
+      </p>
+
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row animate-on-scroll">
+        <a
+          href={appUrl}
+          class="inline-flex h-12 items-center justify-center rounded-full bg-brand-coral px-8 text-base font-medium text-white transition-colors hover:bg-brand-coral-light"
+        >
+          Start Collecting &mdash; It&rsquo;s Free
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex h-12 items-center justify-center rounded-full border border-white/40 px-8 text-base font-medium text-white transition-colors hover:bg-white/10"
+        >
+          See How It Works
+        </a>
+      </div>
+    </div>
   </div>
 
-  <h1 class="font-serif text-4xl font-normal italic leading-tight tracking-tight text-primary sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl animate-on-scroll">
-    Collect inspiration.<br />
-    Generate adventure.
-  </h1>
-
-  <p class="mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl animate-on-scroll">
-    Discover the web&rsquo;s best travel stories and distil them into your
-    perfect plan. Browse hand-picked guides, save what resonates, and let AI
-    build your epic adventure.
-  </p>
-
-  <div class="mt-10 flex flex-col gap-4 sm:flex-row animate-on-scroll">
-    <a
-      href={appUrl}
-      class="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-brand-green-light"
-    >
-      Start Collecting &mdash; It&rsquo;s Free
-    </a>
-    <a
-      href="#how-it-works"
-      class="inline-flex h-12 items-center justify-center rounded-full border border-primary px-8 text-base font-medium text-primary transition-colors hover:bg-brand-cream-dark"
-    >
-      See How It Works
-    </a>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-on-scroll">
+    <span class="text-xs uppercase tracking-widest text-white/60">Scroll</span>
+    <div class="h-8 w-px bg-white/40"></div>
   </div>
 </section>

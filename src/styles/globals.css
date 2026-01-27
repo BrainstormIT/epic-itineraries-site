@@ -104,6 +104,23 @@
   }
 }
 
+/* Header states */
+.header-transparent {
+  background: transparent;
+}
+.header-transparent .header-text-color {
+  color: white;
+}
+.header-scrolled {
+  background: oklch(0.98 0.008 90 / 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid oklch(0.90 0.01 90);
+}
+.header-scrolled .header-text-color {
+  color: oklch(0.35 0.06 160);
+}
+
 /* Scroll animations */
 .animate-on-scroll {
   opacity: 0;
