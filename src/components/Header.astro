@@ -1,8 +1,24 @@
 ---
+interface Props {
+  /**
+   * Whether the header starts transparent (for pages with a hero image).
+   * Defaults to true (homepage behaviour).
+   */
+  transparent?: boolean;
+}
+
+const { transparent = true } = Astro.props;
 const appUrl = 'https://my.epic-itineraries.com/login';
 ---
 
-<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<header
+  id="site-header"
+  class:list={[
+    'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+    !transparent && 'header-scrolled',
+  ]}
+  data-transparent={transparent ? 'true' : 'false'}
+>
   <div class="container flex h-16 items-center justify-between">
     <a href="/" class="flex items-center gap-2">
       <span class="font-serif text-xl font-semibold header-text-color transition-colors duration-300">
@@ -10,6 +26,22 @@ const appUrl = 'https://my.epic-itineraries.com/login';
       </span>
       <span class="text-brand-coral text-xl font-bold">.</span>
     </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a
+        href="/how-it-works"
+        class="font-medium header-text-color transition-colors duration-300 hover:opacity-80"
+      >
+        How It Works
+      </a>
+      <a
+        href="/about"
+        class="font-medium header-text-color transition-colors duration-300 hover:opacity-80"
+      >
+        About
+      </a>
+    </nav>
 
     <div class="flex items-center gap-4">
       <a
@@ -31,17 +63,22 @@ const appUrl = 'https://my.epic-itineraries.com/login';
 <script>
   const header = document.getElementById('site-header');
   if (header) {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        header.classList.add('header-scrolled');
-        header.classList.remove('header-transparent');
-      } else {
-        header.classList.remove('header-scrolled');
-        header.classList.add('header-transparent');
-      }
-    };
-    header.classList.add('header-transparent');
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    const isTransparent = header.dataset.transparent === 'true';
+
+    if (isTransparent) {
+      const handleScroll = () => {
+        if (window.scrollY > 80) {
+          header.classList.add('header-scrolled');
+          header.classList.remove('header-transparent');
+        } else {
+          header.classList.remove('header-scrolled');
+          header.classList.add('header-transparent');
+        }
+      };
+      header.classList.add('header-transparent');
+      handleScroll();
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+    // Non-transparent headers already have header-scrolled class set server-side
   }
 </script>

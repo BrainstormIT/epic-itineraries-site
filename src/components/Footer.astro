@@ -18,26 +18,49 @@ const currentYear = new Date().getFullYear();
         </p>
       </div>
 
-      <nav class="flex flex-wrap items-center gap-6 text-sm">
-        <a
-          href="/privacy"
-          class="text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Privacy Policy
-        </a>
-        <a
-          href="/terms"
-          class="text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Terms of Service
-        </a>
-        <a
-          href="mailto:hello@epic-itineraries.com"
-          class="text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Contact
-        </a>
-      </nav>
+      <!-- Navigation columns -->
+      <div class="flex flex-wrap gap-12 text-sm">
+        <div>
+          <h3 class="font-semibold text-foreground mb-3">Product</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="/how-it-works" class="text-muted-foreground transition-colors hover:text-foreground">
+                How It Works
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-foreground mb-3">Company</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="/about" class="text-muted-foreground transition-colors hover:text-foreground">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@epic-itineraries.com" class="text-muted-foreground transition-colors hover:text-foreground">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-foreground mb-3">Legal</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="/privacy" class="text-muted-foreground transition-colors hover:text-foreground">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/terms" class="text-muted-foreground transition-colors hover:text-foreground">
+                Terms of Service
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Bottom row -->
