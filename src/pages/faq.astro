@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const appUrl = 'https://my.epic-itineraries.com/login';
+
+const faqs = [
+  {
+    question: 'Is Epic Itineraries free?',
+    answer: 'Yes. The core product is free to use &mdash; save content, organise collections, and generate itineraries at no cost. No credit card required to get started. We may introduce premium features in the future, but the fundamentals will always be free.',
+  },
+  {
+    question: 'Do I need to create an account?',
+    answer: 'Yes, you&rsquo;ll need an account so your saved content is stored and accessible across devices. Sign-up is quick &mdash; you can use your email or sign in with Google.',
+  },
+  {
+    question: 'How does the browser extension work?',
+    answer: 'Install the extension from the Chrome Web Store, and you&rsquo;ll see a save button when browsing the web. Click it, choose a collection (or create one on the spot), and the page is saved to your Epic Itineraries library. The extension grabs the title, image, and metadata automatically.',
+  },
+  {
+    question: 'Can I use Epic Itineraries on my phone?',
+    answer: 'Yes. Epic Itineraries is a web app that works on any device with a browser. On mobile, you can save content using your phone&rsquo;s share sheet &mdash; the same way you&rsquo;d share a link with a friend. Install it as a PWA (progressive web app) for the best experience: add it to your home screen and it behaves like a native app.',
+  },
+  {
+    question: 'What types of content can I save?',
+    answer: 'Anything with a URL. Blog posts, YouTube videos, TripAdvisor pages, Airbnb listings, Booking.com hotels, restaurant reviews, social media posts &mdash; if it&rsquo;s on the web, you can save it. We automatically detect the content type (article, video, restaurant, accommodation) and tag it accordingly.',
+  },
+  {
+    question: 'What does the AI actually do?',
+    answer: 'The AI reads all the content you&rsquo;ve saved in a collection and organises it into a day-by-day itinerary. It identifies places, activities, restaurants, and accommodation from your sources and arranges them into a logical plan. It does not invent or add recommendations you didn&rsquo;t save. Every item traces back to a real source you collected.',
+  },
+  {
+    question: 'Will the AI make up places or recommendations?',
+    answer: 'No. This is a firm principle. The AI only works with content you&rsquo;ve saved. It won&rsquo;t add restaurants you didn&rsquo;t find, attractions it thinks you should visit, or filler recommendations. If it&rsquo;s in your itinerary, it came from your research.',
+  },
+  {
+    question: 'Do content creators get credited?',
+    answer: 'Yes, always. Every recommendation in your itinerary links back to the original source &mdash; the blog post, video, or guide it came from. We believe the people who create great travel content deserve visibility, and we&rsquo;ve built that into the product.',
+  },
+  {
+    question: 'How is my data handled?',
+    answer: 'We store the URLs, titles, and metadata of the content you save, along with the extracted text so our AI can read it. Your data is stored securely and is not shared with third parties. We use analytics to improve the product, but your saved content is yours. See our privacy policy for full details.',
+  },
+  {
+    question: 'Can I share my itinerary or collection with others?',
+    answer: 'Yes. You can share collections and generated itineraries with others via a link. This is handy for group trips where everyone wants to contribute finds or review the plan together.',
+  },
+  {
+    question: 'Do I need to have a destination picked before I start?',
+    answer: 'Not at all. One of the best things about Epic Itineraries is that you can start saving content before you&rsquo;ve decided where to go. Build a general inspiration collection, and when a trip takes shape, move the relevant content into a trip-specific collection.',
+  },
+  {
+    question: 'What browsers are supported?',
+    answer: 'The web app works in any modern browser &mdash; Chrome, Safari, Firefox, Edge. The browser extension is currently available for Chrome and Chromium-based browsers (Edge, Brave, Arc). Safari and Firefox extensions are on the roadmap.',
+  },
+  {
+    question: 'Is there an app I can download?',
+    answer: 'Epic Itineraries is a progressive web app (PWA). You can install it directly from your browser &mdash; add it to your home screen on mobile or install it from the address bar on desktop. It works offline for viewing your saved content and feels like a native app.',
+  },
+  {
+    question: 'How do I get in touch?',
+    answer: 'Email us at <a href="mailto:hello@epic-itineraries.com" class="text-primary hover:underline">hello@epic-itineraries.com</a>. We&rsquo;d love to hear from you &mdash; whether it&rsquo;s feedback, a feature request, or a bug report.',
+  },
+  {
+    question: 'Who built this?',
+    answer: 'Epic Itineraries is built by Edwin van Leeuwen at <a href="https://brainstorm-it.nl" class="text-primary hover:underline">Brainstorm IT</a>, a small product studio based in the Netherlands. It started as a personal side project born from the frustration of losing great travel finds across too many apps.',
+  },
+];
+---
+
+<BaseLayout
+  title="Frequently asked questions | Epic Itineraries"
+  description="Common questions about Epic Itineraries — pricing, privacy, what the AI does, browser extension, mobile support, and more."
+>
+  <Header transparent={false} />
+  <main class="pt-24">
+    <!-- Hero -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h1 class="font-serif text-4xl font-normal italic text-primary mb-6 md:text-5xl animate-on-scroll">
+          Frequently asked questions
+        </h1>
+        <p class="text-lg text-muted-foreground animate-on-scroll">
+          Got questions? Here are the ones we hear most. If yours isn&rsquo;t covered, drop us a
+          line at
+          <a href="mailto:hello@epic-itineraries.com" class="text-primary hover:underline">
+            hello@epic-itineraries.com</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ items -->
+    <section class="pb-16 md:pb-24">
+      <div class="container max-w-3xl">
+        <div class="divide-y divide-border stagger-children">
+          {faqs.map((faq) => (
+            <details class="group animate-on-scroll">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 py-6 text-left font-semibold text-foreground transition-colors hover:text-primary [&::-webkit-details-marker]:hidden list-none">
+                <span class="text-base md:text-lg">{faq.question}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-45"
+                >
+                  <path d="M12 5v14" />
+                  <path d="M5 12h14" />
+                </svg>
+              </summary>
+              <div class="pb-6 pr-12 text-muted-foreground leading-relaxed">
+                <p set:html={faq.answer} />
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-20">
+      <div class="container">
+        <div class="relative overflow-hidden rounded-3xl bg-primary p-8 md:p-20 lg:p-24 text-center animate-on-scroll">
+          <!-- Subtle radial gradient texture -->
+          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.45_0.08_160)_0%,_transparent_50%)] opacity-30"></div>
+          <!-- Dot pattern -->
+          <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+          <!-- Decorative sparkles -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-8 right-12 text-brand-coral/20 hidden md:block">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute bottom-12 left-16 text-brand-coral/15 hidden md:block">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+          </svg>
+
+          <div class="relative z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral mx-auto mb-6">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+
+            <h2 class="font-serif text-3xl font-normal italic text-primary-foreground mb-4 md:text-4xl">
+              Still have questions?
+            </h2>
+            <p class="text-primary-foreground/80 max-w-xl mx-auto mb-8">
+              We&rsquo;re happy to help. Reach out at
+              <a href="mailto:hello@epic-itineraries.com" class="underline hover:text-white transition-colors">
+                hello@epic-itineraries.com</a>,
+              or just dive in &mdash; it&rsquo;s free.
+            </p>
+            <a
+              href={appUrl}
+              class="inline-flex h-12 items-center justify-center rounded-full bg-brand-coral px-8 text-base font-medium text-white transition-all hover:bg-brand-coral-light hover:scale-105 duration-200"
+            >
+              Start Collecting &mdash; It&rsquo;s Free
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
