@@ -79,6 +79,10 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+  :focus-visible {
+    outline: 2px solid var(--brand-coral);
+    outline-offset: 2px;
+  }
 }
 
 /* Container utility with responsive padding */
@@ -131,6 +135,14 @@
 .animate-on-scroll.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 .stagger-children > .animate-on-scroll:nth-child(1) { transition-delay: 0ms; }
@@ -329,6 +341,39 @@
 .blog-prose td {
   border-bottom: 1px solid oklch(0.93 0.008 90);
   padding: 0.6em 1em;
+}
+
+/* Mobile menu styles (checkbox hack for zero-JS) */
+.mobile-menu-checkbox:not(:checked) ~ .mobile-menu-overlay {
+  transform: translateX(100%);
+  visibility: hidden;
+}
+
+.mobile-menu-checkbox:checked ~ .mobile-menu-overlay {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: oklch(0.98 0.008 90);
+  transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Toggle hamburger/close icon based on checkbox state */
+.mobile-menu-checkbox:not(:checked) ~ #site-header .close-icon {
+  display: none;
+}
+.mobile-menu-checkbox:not(:checked) ~ #site-header .hamburger-icon {
+  display: block;
+}
+.mobile-menu-checkbox:checked ~ #site-header .close-icon {
+  display: block;
+}
+.mobile-menu-checkbox:checked ~ #site-header .hamburger-icon {
+  display: none;
 }
 
 /* Line clamp utility for blog cards */

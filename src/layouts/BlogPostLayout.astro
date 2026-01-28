@@ -29,7 +29,6 @@ const formatDate = (date: Date) =>
     year: 'numeric',
   });
 
-const appUrl = 'https://my.epic-itineraries.com/login';
 const postUrl = Astro.url.href;
 ---
 
@@ -131,6 +130,7 @@ const postUrl = Astro.url.href;
             Enjoyed this? Share it with a fellow traveller.
           </p>
           <button
+            type="button"
             id="copy-link-btn"
             data-url={postUrl}
             class="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-all hover:bg-brand-cream-dark hover:border-brand-coral/30 active:scale-95"

@@ -33,9 +33,17 @@ const siteUrl = 'https://epic-itineraries.com';
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
 
+    <!-- Theme colour -->
+    <meta name="theme-color" content="#3d5a4e" />
+
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Noscript fallback for scroll animations -->
+    <noscript>
+      <style>.animate-on-scroll { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
