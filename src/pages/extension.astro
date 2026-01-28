@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BottomCTA from '../components/BottomCTA.astro';
+
+const appUrl = 'https://my.epic-itineraries.com/login';
+const chromeExtensionUrl = 'https://chromewebstore.google.com/detail/epic-itineraries/placeholder';
+---
+
+<BaseLayout
+  title="Browser Extension | Epic Itineraries"
+  description="Save travel content from any website in one click. The Epic Itineraries browser extension captures articles, videos, hotel listings, and restaurant reviews automatically."
+>
+  <Header transparent={false} />
+  <main class="pt-24">
+    <!-- Hero -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h1 class="font-serif text-4xl font-normal italic text-primary mb-6 md:text-5xl animate-on-scroll">
+          Save travel content in one click.
+        </h1>
+        <p class="text-lg text-muted-foreground mb-8 animate-on-scroll">
+          The Epic Itineraries browser extension sits quietly in your browser until you find
+          something worth saving. One click captures the page with all its metadata &mdash; title,
+          image, content type &mdash; ready to organise.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 animate-on-scroll">
+          <a
+            href={chromeExtensionUrl}
+            class="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-medium text-primary-foreground transition-all hover:bg-brand-green-light hover:scale-105 duration-200"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="21.17" x2="12" y1="8" y2="8"></line>
+              <line x1="3.95" x2="8.54" y1="6.06" y2="14"></line>
+              <line x1="10.88" x2="15.46" y1="21.94" y2="14"></line>
+            </svg>
+            Install for Chrome &mdash; Free
+          </a>
+          <a
+            href="/how-it-works"
+            class="text-sm font-medium text-primary transition-colors hover:text-brand-green-light hover:underline"
+          >
+            See how it works &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 bg-brand-cream-dark">
+      <div class="container max-w-3xl">
+        <h2 class="font-serif text-3xl font-normal italic text-primary mb-10 animate-on-scroll">
+          Three steps. That&rsquo;s it.
+        </h2>
+
+        <div class="space-y-10 stagger-children">
+          <!-- Step 1 -->
+          <div class="animate-on-scroll">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-coral text-white font-semibold text-sm shrink-0 mt-1">
+                1
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Browse as normal</h3>
+                <p class="text-muted-foreground">
+                  Read blogs, watch YouTube videos, scroll through Airbnb. When something catches
+                  your eye, the extension is ready.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="animate-on-scroll">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-coral text-white font-semibold text-sm shrink-0 mt-1">
+                2
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Click to save</h3>
+                <p class="text-muted-foreground">
+                  Hit the extension icon and pick a collection. The page title, image, and content
+                  type are captured automatically. No copy-pasting URLs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="animate-on-scroll">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-coral text-white font-semibold text-sm shrink-0 mt-1">
+                3
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Everything in one place</h3>
+                <p class="text-muted-foreground">
+                  Your saves appear in your Epic Itineraries library, organised and searchable. When
+                  you&rsquo;ve collected enough, AI turns your research into an itinerary.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What gets captured -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h2 class="font-serif text-3xl font-normal italic text-primary mb-4 animate-on-scroll">
+          Works with the travel content you actually use.
+        </h2>
+        <p class="text-muted-foreground mb-8 animate-on-scroll">
+          Content type is detected automatically. You just click save.
+        </p>
+
+        <div class="grid gap-3 sm:grid-cols-2 stagger-children">
+          <div class="rounded-2xl bg-brand-cream-dark p-5 flex items-center gap-4 animate-on-scroll">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-coral/10 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                <path d="M18 14h-8"></path>
+                <path d="M15 18h-5"></path>
+                <path d="M10 6h8v4h-8V6Z"></path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium">Blog posts &amp; articles</span>
+          </div>
+
+          <div class="rounded-2xl bg-brand-cream-dark p-5 flex items-center gap-4 animate-on-scroll">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-coral/10 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <path d="m22 8-6 4 6 4V8Z"></path>
+                <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <span class="text-sm font-medium">YouTube videos &amp; vlogs</span>
+          </div>
+
+          <div class="rounded-2xl bg-brand-cream-dark p-5 flex items-center gap-4 animate-on-scroll">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-coral/10 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                <path d="M8 7v10"></path>
+                <path d="M12 7v10"></path>
+                <path d="M17 7v10"></path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium">Airbnb &amp; Booking.com listings</span>
+          </div>
+
+          <div class="rounded-2xl bg-brand-cream-dark p-5 flex items-center gap-4 animate-on-scroll">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-coral/10 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                <line x1="12" x2="12" y1="2" y2="4"></line>
+              </svg>
+            </div>
+            <span class="text-sm font-medium">Restaurant reviews (TripAdvisor, TheFork)</span>
+          </div>
+
+          <div class="rounded-2xl bg-brand-cream-dark p-5 flex items-center gap-4 animate-on-scroll">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-coral/10 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="text-sm font-medium">Google Maps locations</span>
+          </div>
+
+          <div class="rounded-2xl bg-brand-cream-dark p-5 flex items-center gap-4 animate-on-scroll">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-coral/10 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium">Social media posts</span>
+          </div>
+
+          <div class="rounded-2xl bg-brand-cream-dark p-5 flex items-center gap-4 sm:col-span-2 animate-on-scroll">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-coral/10 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium">Any URL with travel content</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Also on mobile -->
+    <section class="py-16 bg-brand-cream-dark">
+      <div class="container max-w-3xl">
+        <div class="animate-on-scroll">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-coral/10">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                <path d="M12 18h.01"></path>
+              </svg>
+            </div>
+            <h2 class="font-serif text-3xl font-normal italic text-primary">
+              No extension? No problem.
+            </h2>
+          </div>
+        </div>
+
+        <div class="space-y-6 text-muted-foreground animate-on-scroll">
+          <p>
+            On your phone, use the share sheet &mdash; the same button you&rsquo;d use to send a
+            link to a friend. Share it to Epic Itineraries and it lands in your library, ready to
+            organise.
+          </p>
+          <p>
+            Install as a PWA from your browser for the best experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h2 class="font-serif text-3xl font-normal italic text-primary mb-10 animate-on-scroll">
+          Common questions
+        </h2>
+
+        <div class="space-y-8 stagger-children">
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">Is it free?</h3>
+            <p class="text-muted-foreground">
+              Yes, completely free.
+            </p>
+          </div>
+
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">Which browsers?</h3>
+            <p class="text-muted-foreground">
+              Chrome and Chromium-based browsers (Edge, Brave, Arc). Safari and Firefox are on the
+              roadmap.
+            </p>
+          </div>
+
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">What data does it collect?</h3>
+            <p class="text-muted-foreground">
+              Only the pages you explicitly save. We don&rsquo;t track your browsing or collect data
+              in the background.
+            </p>
+          </div>
+
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">Do I need an account?</h3>
+            <p class="text-muted-foreground">
+              Yes, to sync your saves across devices. Sign up is free and takes seconds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <BottomCTA />
+  </main>
+  <Footer />
+</BaseLayout>
