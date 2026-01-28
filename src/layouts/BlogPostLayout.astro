@@ -1,0 +1,185 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BottomCTA from '../components/BottomCTA.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  author: string;
+  publishDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  tags: string[];
+}
+
+const { title, description, author, publishDate, updatedDate, heroImage, tags } = Astro.props;
+
+// Reading time estimate based on word count (~220 words per minute for long-form)
+const rawContent = await Astro.slots.render('default');
+const wordCount = rawContent.replace(/<[^>]*>/g, '').split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 220));
+
+// Format dates in British style
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
+const appUrl = 'https://my.epic-itineraries.com/login';
+const postUrl = Astro.url.href;
+---
+
+<BaseLayout
+  title={`${title} | Epic Itineraries Blog`}
+  description={description}
+  ogImage={heroImage}
+>
+  <Header transparent={false} />
+
+  <main class="pt-24 pb-8">
+    <!-- Back link -->
+    <div class="container max-w-3xl mb-8">
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary group"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="transition-transform group-hover:-translate-x-0.5"
+        >
+          <path d="m12 19-7-7 7-7"></path>
+          <path d="M19 12H5"></path>
+        </svg>
+        All posts
+      </a>
+    </div>
+
+    <!-- Article header -->
+    <header class="container max-w-3xl mb-12">
+      {tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-5">
+          {tags.map((tag) => (
+            <span class="inline-flex items-center rounded-full bg-brand-cream-dark px-3 py-1 text-xs font-medium text-muted-foreground">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <h1 class="font-serif text-4xl font-normal italic text-primary leading-tight mb-6 md:text-5xl md:leading-tight">
+        {title}
+      </h1>
+
+      <p class="text-lg text-muted-foreground mb-6 leading-relaxed">
+        {description}
+      </p>
+
+      <!-- Meta line -->
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground border-t border-b border-border py-4">
+        <span class="font-medium text-foreground">{author}</span>
+        <span class="text-border">|</span>
+        <time datetime={publishDate.toISOString()}>
+          {formatDate(publishDate)}
+        </time>
+        <span class="text-border">|</span>
+        <span>{readingTime} min read</span>
+        {updatedDate && (
+          <>
+            <span class="text-border">|</span>
+            <span class="italic">
+              Updated {formatDate(updatedDate)}
+            </span>
+          </>
+        )}
+      </div>
+    </header>
+
+    <!-- Hero image -->
+    {heroImage && (
+      <div class="container max-w-4xl mb-12">
+        <img
+          src={heroImage}
+          alt={title}
+          class="w-full rounded-2xl object-cover aspect-[2/1]"
+          loading="eager"
+        />
+      </div>
+    )}
+
+    <!-- Article body -->
+    <article class="container max-w-3xl blog-prose mb-16">
+      <slot />
+    </article>
+
+    <!-- Share section -->
+    <div class="container max-w-3xl mb-16">
+      <div class="border-t border-border pt-8">
+        <div class="flex items-center justify-between">
+          <p class="text-sm text-muted-foreground">
+            Enjoyed this? Share it with a fellow traveller.
+          </p>
+          <button
+            id="copy-link-btn"
+            data-url={postUrl}
+            class="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-all hover:bg-brand-cream-dark hover:border-brand-coral/30 active:scale-95"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+            <span id="copy-link-text">Copy link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <BottomCTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  const btn = document.getElementById('copy-link-btn');
+  const text = document.getElementById('copy-link-text');
+  if (btn && text) {
+    btn.addEventListener('click', async () => {
+      const url = btn.getAttribute('data-url') || window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        text.textContent = 'Copied!';
+        setTimeout(() => {
+          text.textContent = 'Copy link';
+        }, 2000);
+      } catch {
+        text.textContent = 'Failed';
+        setTimeout(() => {
+          text.textContent = 'Copy link';
+        }, 2000);
+      }
+    });
+  }
+</script>
