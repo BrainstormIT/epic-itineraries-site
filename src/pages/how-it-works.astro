@@ -8,7 +8,7 @@ import BottomCTA from '../components/BottomCTA.astro';
 
 <BaseLayout
   title="How It Works | Epic Itineraries"
-  description="Save travel content from anywhere, organise it by trip, and let AI turn your research into a day-by-day itinerary."
+  description="Save travel content from anywhere, organise by trip, and see all your research in one place."
 >
   <Header transparent={false} />
   <main class="pt-24">
@@ -16,12 +16,10 @@ import BottomCTA from '../components/BottomCTA.astro';
     <section class="py-16 md:py-24">
       <div class="container max-w-3xl">
         <h1 class="font-serif text-4xl font-normal italic text-primary mb-6 md:text-5xl animate-on-scroll">
-          From scattered saves to structured trip &mdash; here&rsquo;s how.
+          Everything you save. One place to find it.
         </h1>
         <p class="text-lg text-muted-foreground animate-on-scroll">
-          Planning a trip shouldn&rsquo;t mean losing your best finds in a sea of bookmarks.
-          Epic Itineraries gives you one place to save everything you discover, and an AI that
-          turns it into a plan you can actually follow.
+          Epic Itineraries brings your scattered travel research together. Here&rsquo;s how.
         </p>
       </div>
     </section>
@@ -39,15 +37,17 @@ import BottomCTA from '../components/BottomCTA.astro';
             </h2>
           </div>
           <p class="text-lg text-muted-foreground mb-6">
-            See something great? Save it in one click.
+            One click. From anywhere.
           </p>
         </div>
 
         <div class="space-y-6 text-muted-foreground animate-on-scroll">
           <p>
-            Whether you&rsquo;re reading a blog post on your laptop, watching a YouTube video on
-            the train, or scrolling through recommendations on your phone, saving content to Epic
-            Itineraries takes a single action.
+            The best travel content is everywhere &mdash; blogs, YouTube, Instagram, TikTok,
+            hotel sites, restaurant reviews, random tweets someone shared at 2am.
+          </p>
+          <p>
+            Epic Itineraries lets you save from all of them.
           </p>
 
           <div class="grid gap-6 md:grid-cols-2">
@@ -61,9 +61,8 @@ import BottomCTA from '../components/BottomCTA.astro';
                 On desktop
               </h3>
               <p class="text-sm">
-                The browser extension adds a save button to any page. Click it, pick a collection
-                (or create a new one), and you&rsquo;re done. The extension grabs the title, image,
-                and key details automatically.
+                Install the browser extension. Click the button. Done. Works with
+                Chrome, Firefox, Safari, and Edge. One click adds the page to your collection.
               </p>
             </div>
             <div class="rounded-2xl bg-card p-6 border border-border">
@@ -75,40 +74,19 @@ import BottomCTA from '../components/BottomCTA.astro';
                 On mobile
               </h3>
               <p class="text-sm">
-                Use the share sheet &mdash; the same button you&rsquo;d use to send a link to a
-                friend. Share it to Epic Itineraries instead, and it lands in your library.
+                Use the share sheet. Share to Epic Itineraries like you&rsquo;d share
+                to WhatsApp or Notes. Works from any app &mdash; Safari, Instagram,
+                YouTube, TikTok, Google Maps.
               </p>
             </div>
           </div>
 
           <div class="rounded-2xl bg-card p-6 border border-border">
-            <h3 class="font-semibold mb-3">What you can save</h3>
-            <div class="grid gap-2 sm:grid-cols-2 text-sm">
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
-                Blog posts and travel articles
-              </span>
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
-                YouTube videos and vlogs
-              </span>
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
-                Restaurant and hotel listings
-              </span>
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
-                Airbnb and Booking.com links
-              </span>
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
-                TripAdvisor pages
-              </span>
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
-                Basically any URL with travel content
-              </span>
-            </div>
+            <h3 class="font-semibold mb-3">Prefer to paste?</h3>
+            <p class="text-sm">
+              Just add the URL. We extract the title, image, and details automatically.
+              You never fill in a form.
+            </p>
           </div>
         </div>
       </div>
@@ -127,49 +105,39 @@ import BottomCTA from '../components/BottomCTA.astro';
             </h2>
           </div>
           <p class="text-lg text-muted-foreground mb-6">
-            Group your finds into collections that make sense to you.
+            Collections for every trip. Or no trip at all.
           </p>
         </div>
 
         <div class="space-y-6 text-muted-foreground animate-on-scroll">
           <p>
-            Every link you save goes into your library. From there, you can add it to one or more
-            collections &mdash; think of them as folders for a trip or a theme.
+            Group your saves however makes sense to you.
           </p>
 
           <div class="rounded-2xl bg-brand-cream-dark p-6">
-            <h3 class="font-semibold mb-3 text-foreground">A collection might be:</h3>
-            <ul class="space-y-2 text-sm">
-              <li class="flex items-center gap-3">
-                <span class="text-brand-coral">&ldquo;</span>
-                <span>Japan October 2026</span>
-                <span class="text-brand-coral">&rdquo;</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-brand-coral">&ldquo;</span>
-                <span>Long weekend ideas</span>
-                <span class="text-brand-coral">&rdquo;</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-brand-coral">&ldquo;</span>
-                <span>Restaurants in Barcelona</span>
-                <span class="text-brand-coral">&rdquo;</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-brand-coral">&ldquo;</span>
-                <span>Someday list</span>
-                <span class="text-brand-coral">&rdquo;</span>
-              </li>
-            </ul>
+            <div class="grid gap-4 sm:grid-cols-2 text-sm">
+              <div>
+                <h3 class="font-semibold text-foreground mb-2">By trip</h3>
+                <p>&ldquo;Japan 2026&rdquo; &mdash; everything for that trip in one place.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-foreground mb-2">By type</h3>
+                <p>&ldquo;Restaurants to try&rdquo; &mdash; your running list of places that look good.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-foreground mb-2">By vibe</h3>
+                <p>&ldquo;Someday list&rdquo; &mdash; the places you&rsquo;ll get to eventually.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-foreground mb-2">By nothing</h3>
+                <p>Throw everything into one collection and sort it later. We won&rsquo;t judge.</p>
+              </div>
+            </div>
           </div>
 
           <p>
-            You don&rsquo;t need to have a trip planned to start collecting. Save what catches your
-            eye now. When a trip takes shape, you&rsquo;ll already have a head start.
-          </p>
-          <p>
-            Collections are yours to name, reorder, and share. The system tags content by type
-            (article, video, restaurant, accommodation) automatically.
+            We detect content types automatically. Hotels, restaurants, activities, videos,
+            articles &mdash; each gets its own badge. Filter by type when your collection gets big.
           </p>
         </div>
       </div>
@@ -184,61 +152,166 @@ import BottomCTA from '../components/BottomCTA.astro';
               3
             </div>
             <h2 class="font-serif text-3xl font-normal italic text-primary">
-              Generate your itinerary
+              See it all together
             </h2>
           </div>
           <p class="text-lg text-muted-foreground mb-6">
-            When you&rsquo;re ready, AI reads everything you&rsquo;ve saved and builds your plan.
+            Your research. Readable.
           </p>
         </div>
 
         <div class="space-y-6 text-muted-foreground animate-on-scroll">
           <p>
-            This is where it comes together. Once you&rsquo;ve gathered enough content in a
-            collection, hit the generate button and the AI gets to work.
+            Open a collection and everything&rsquo;s there. Not just a list of links &mdash;
+            actual readable content.
+          </p>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="rounded-2xl bg-card p-6 border border-border">
+              <h3 class="font-semibold mb-2 text-foreground">Rich previews</h3>
+              <p class="text-sm">
+                We extract titles, images, descriptions, and key details. See what
+                each link is about without opening it.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-card p-6 border border-border">
+              <h3 class="font-semibold mb-2 text-foreground">Quick reading</h3>
+              <p class="text-sm">
+                Click any card to read the full content. No leaving Epic Itineraries.
+                No hunting for the tab you had open.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-card p-6 border border-border">
+              <h3 class="font-semibold mb-2 text-foreground">Search</h3>
+              <p class="text-sm">
+                Can&rsquo;t remember where you saved that rooftop bar? Search across
+                your collection. Find it instantly.
+              </p>
+            </div>
+          </div>
+
+          <p class="text-foreground font-medium">
+            No more hunting through tabs. No more &ldquo;where did I save that?&rdquo;
+            No more losing the best things you found.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional: Trip Personality -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <div class="animate-on-scroll">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="inline-flex items-center gap-2 rounded-full bg-brand-coral/10 px-3 py-1 text-xs font-medium text-brand-coral">
+              Optional
+            </span>
+            <h2 class="font-serif text-3xl font-normal italic text-primary">
+              Set your trip personality
+            </h2>
+          </div>
+          <p class="text-lg text-muted-foreground mb-6">
+            Tell us what kind of trip this is. Completely optional.
+          </p>
+        </div>
+
+        <div class="space-y-6 text-muted-foreground animate-on-scroll">
+          <p>
+            Epic Itineraries works perfectly without setting any preferences.
+            But if you want, you can tell us a bit about this specific trip:
+          </p>
+
+          <div class="rounded-2xl bg-brand-cream-dark p-6">
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-3">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
+                What kind of trip is this? (Adventure, relaxation, culture, food, mix)
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
+                What&rsquo;s your budget? (Budget, mid-range, splurge)
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
+                How do you get around? (Walking, public transport, car)
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="h-1.5 w-1.5 rounded-full bg-brand-coral shrink-0"></span>
+                Who&rsquo;s coming? (Solo, couple, group, family)
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            This helps with filtering and organisation. Looking for budget-friendly options?
+            Filter for those. Want only walkable recommendations? We&rsquo;ll highlight them.
+          </p>
+
+          <div class="rounded-2xl border-2 border-brand-coral/20 bg-card p-6">
+            <h3 class="font-semibold mb-2 text-foreground">What we DON&rsquo;T do:</h3>
+            <ul class="space-y-2 text-sm">
+              <li>&bull; Build a profile of you across trips</li>
+              <li>&bull; Share this data with anyone</li>
+              <li>&bull; Use it for advertising</li>
+              <li>&bull; Keep it after you delete the collection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional: AI Itinerary -->
+    <section class="py-16 bg-brand-cream-dark">
+      <div class="container max-w-3xl">
+        <div class="animate-on-scroll">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="inline-flex items-center gap-2 rounded-full bg-brand-coral/10 px-3 py-1 text-xs font-medium text-brand-coral">
+              Optional
+            </span>
+            <h2 class="font-serif text-3xl font-normal italic text-primary">
+              Turn your research into a plan
+            </h2>
+          </div>
+          <p class="text-lg text-muted-foreground mb-6">
+            When you&rsquo;re ready. And only when you&rsquo;re ready.
+          </p>
+        </div>
+
+        <div class="space-y-6 text-muted-foreground animate-on-scroll">
+          <p>
+            You&rsquo;ve saved 30 things. You&rsquo;ve organised them into collections.
+            Now you want to figure out which days to do what.
+          </p>
+          <p>
+            When you&rsquo;re ready, our AI can read your research and suggest a day-by-day plan.
           </p>
 
           <div class="grid gap-6 md:grid-cols-2">
             <div class="rounded-2xl bg-card p-6 border border-border">
-              <h3 class="font-semibold mb-3 flex items-center gap-2 text-foreground">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-light">
-                  <path d="M20 6 9 17l-5-5"></path>
-                </svg>
-                What the AI does
-              </h3>
-              <ul class="space-y-2 text-sm">
-                <li>Reads the full content of every page you saved</li>
-                <li>Identifies places, activities, restaurants, and accommodation</li>
-                <li>Groups them by location and theme</li>
-                <li>Structures everything into a day-by-day plan</li>
-                <li>Adds context from the original sources</li>
-              </ul>
+              <h3 class="font-semibold mb-3 text-foreground">How it works</h3>
+              <p class="text-sm">
+                We look at what YOU saved. Not generic recommendations. Not sponsored content.
+                Your actual research. The AI reads your blog posts, videos, and listings.
+                It understands what each place is. It suggests an order that makes sense.
+              </p>
             </div>
             <div class="rounded-2xl bg-card p-6 border border-border">
-              <h3 class="font-semibold mb-3 flex items-center gap-2 text-foreground">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-destructive">
-                  <path d="M18 6 6 18"></path>
-                  <path d="m6 6 12 12"></path>
-                </svg>
-                What the AI doesn&rsquo;t do
-              </h3>
-              <ul class="space-y-2 text-sm">
-                <li>Invent places you didn&rsquo;t save</li>
-                <li>Make up restaurant names or attractions</li>
-                <li>Add generic filler recommendations</li>
-                <li>Remove your original sources</li>
-              </ul>
+              <h3 class="font-semibold mb-3 text-foreground">What you get</h3>
+              <p class="text-sm">
+                A starting point. Edit it however you like. Swap days around. Add things.
+                Remove things. It&rsquo;s your trip.
+              </p>
             </div>
           </div>
 
-          <p>
-            Every item in your itinerary links back to the article, video, or guide it came from.
-            The creators who inspired your trip stay visible and credited.
-          </p>
-          <p class="text-foreground font-medium">
-            The result is a structured plan that reflects your taste, your research, and your
-            priorities. Not a generic template. Yours.
-          </p>
+          <div class="rounded-2xl border-2 border-primary/10 bg-card p-6">
+            <h3 class="font-semibold mb-2 text-foreground">Not interested in AI?</h3>
+            <p class="text-sm">
+              That&rsquo;s fine. Skip this entirely. Your collections work perfectly as-is.
+              Many people prefer to plan manually &mdash; we&rsquo;re just here to keep
+              your research organised.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -256,7 +329,7 @@ import BottomCTA from '../components/BottomCTA.astro';
             <p class="text-muted-foreground">
               You&rsquo;re dreaming about a three-week trip to Japan. Over the next few months, you
               save every article, vlog, and recommendation you come across. When it&rsquo;s time to
-              book, you have a curated library of content ready to become your itinerary.
+              book, you have a curated library of content ready to plan from.
             </p>
           </div>
 
@@ -272,8 +345,8 @@ import BottomCTA from '../components/BottomCTA.astro';
             <h3 class="font-semibold text-lg mb-2">The couple that can&rsquo;t agree</h3>
             <p class="text-muted-foreground">
               You each save content separately &mdash; one of you is saving food blogs, the
-              other is saving hiking guides. When you combine collections, the AI weaves both sets
-              of research into one balanced plan.
+              other is saving hiking guides. When you combine collections, you have both sets
+              of research in one place to plan from.
             </p>
           </div>
 
@@ -281,8 +354,8 @@ import BottomCTA from '../components/BottomCTA.astro';
             <h3 class="font-semibold text-lg mb-2">The group organiser</h3>
             <p class="text-muted-foreground">
               Planning a friends&rsquo; trip is always chaos. Share a collection link and let
-              everyone add their finds. The AI builds a plan from everything the group saved, so
-              nobody&rsquo;s pick gets lost.
+              everyone add their finds. All your research in one place, so nobody&rsquo;s
+              pick gets lost.
             </p>
           </div>
         </div>
