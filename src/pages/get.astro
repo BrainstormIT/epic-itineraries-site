@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BottomCTA from '../components/BottomCTA.astro';
+import { APP_URL } from '../config';
+
+const chromeExtensionUrl = '#chrome-web-store';
+---
+
+<BaseLayout
+  title="Get Epic Itineraries | Browser Extension & Mobile App"
+  description="Install the Epic Itineraries browser extension or add the app to your phone's home screen. Save travel content from anywhere, on any device."
+>
+  <Header transparent={false} />
+  <main class="pt-24">
+    <!-- Hero -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h1 class="font-serif text-4xl font-normal italic text-primary mb-6 md:text-5xl animate-on-scroll">
+          Take it everywhere.
+        </h1>
+        <p class="text-lg text-muted-foreground animate-on-scroll">
+          Save travel inspiration from your laptop at home or your phone on the go.
+          Epic Itineraries works wherever you are.
+        </p>
+      </div>
+    </section>
+
+    <!-- Two platform cards -->
+    <section class="py-16 bg-brand-cream-dark">
+      <div class="container max-w-3xl">
+        <div class="grid gap-6 md:grid-cols-2 stagger-children">
+          <!-- On your computer -->
+          <div class="rounded-[2rem] bg-card p-8 shadow-sm transition-shadow hover:shadow-lg animate-on-scroll">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-coral/10 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                <path d="M3 9h18"></path>
+                <path d="M9 21V9"></path>
+              </svg>
+            </div>
+            <h2 class="font-serif text-2xl font-normal italic text-primary mb-3">
+              On your computer
+            </h2>
+            <p class="text-muted-foreground mb-6">
+              Install the browser extension. One click saves the page &mdash; title, image,
+              and content type captured automatically.
+            </p>
+            <a
+              href={chromeExtensionUrl}
+              class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-all hover:bg-brand-green-light hover:scale-105 duration-200"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="21.17" x2="12" y1="8" y2="8"></line>
+                <line x1="3.95" x2="8.54" y1="6.06" y2="14"></line>
+                <line x1="10.88" x2="15.46" y1="21.94" y2="14"></line>
+              </svg>
+              Install for Chrome &mdash; Free
+            </a>
+          </div>
+
+          <!-- On your phone -->
+          <div class="rounded-[2rem] bg-card p-8 shadow-sm transition-shadow hover:shadow-lg animate-on-scroll">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-coral/10 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                <path d="M12 18h.01"></path>
+              </svg>
+            </div>
+            <h2 class="font-serif text-2xl font-normal italic text-primary mb-3">
+              On your phone
+            </h2>
+            <p class="text-muted-foreground mb-6">
+              Use the share sheet &mdash; the same button you&rsquo;d use to send a link to a friend.
+              Share it to Epic Itineraries and it lands in your library.
+            </p>
+            <a
+              href={APP_URL}
+              class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-all hover:bg-brand-green-light hover:scale-105 duration-200"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                <polyline points="16 6 12 2 8 6"></polyline>
+                <line x1="12" x2="12" y1="2" y2="15"></line>
+              </svg>
+              Open Epic Itineraries
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PWA install guide -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h2 class="font-serif text-3xl font-normal italic text-primary mb-4 animate-on-scroll">
+          Add it to your home screen.
+        </h2>
+        <p class="text-muted-foreground mb-10 animate-on-scroll">
+          Get the full app experience on your phone. No app store needed &mdash; just add it
+          from your browser in a few taps.
+        </p>
+
+        <div class="grid gap-6 md:grid-cols-2 stagger-children">
+          <!-- iPhone -->
+          <div class="rounded-[2rem] bg-brand-cream-dark p-8 animate-on-scroll">
+            <h3 class="font-semibold text-lg mb-4 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral shrink-0">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                <path d="M12 18h.01"></path>
+              </svg>
+              iPhone
+            </h3>
+            <ol class="space-y-3 text-sm text-muted-foreground">
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">1</span>
+                <span>Open <strong class="text-foreground">epic-itineraries.com</strong> in Safari</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">2</span>
+                <span>Tap the <strong class="text-foreground">Share</strong> button (the square with an arrow)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">3</span>
+                <span>Scroll down and tap <strong class="text-foreground">Add to Home Screen</strong></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">4</span>
+                <span>Tap <strong class="text-foreground">Add</strong> &mdash; done!</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Android -->
+          <div class="rounded-[2rem] bg-brand-cream-dark p-8 animate-on-scroll">
+            <h3 class="font-semibold text-lg mb-4 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral shrink-0">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                <path d="M12 18h.01"></path>
+              </svg>
+              Android
+            </h3>
+            <ol class="space-y-3 text-sm text-muted-foreground">
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">1</span>
+                <span>Open <strong class="text-foreground">epic-itineraries.com</strong> in Chrome</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">2</span>
+                <span>Tap the <strong class="text-foreground">three-dot menu</strong> in the top right</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">3</span>
+                <span>Tap <strong class="text-foreground">Add to Home screen</strong></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">4</span>
+                <span>Tap <strong class="text-foreground">Install</strong> &mdash; done!</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's coming — browser status pills -->
+    <section class="py-16 bg-brand-cream-dark">
+      <div class="container max-w-3xl">
+        <h2 class="font-serif text-3xl font-normal italic text-primary mb-4 animate-on-scroll">
+          What&rsquo;s coming.
+        </h2>
+        <p class="text-muted-foreground mb-8 animate-on-scroll">
+          The extension works on all Chromium browsers today. We&rsquo;re expanding support.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3 stagger-children">
+          <!-- Chrome — available -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5" class="text-primary"/>
+              <line x1="21.17" x2="12" y1="8" y2="8" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+              <line x1="3.95" x2="8.54" y1="6.06" y2="14" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+              <line x1="10.88" x2="15.46" y1="21.94" y2="14" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+            </svg>
+            <span class="text-sm font-medium">Chrome</span>
+            <span class="inline-flex items-center rounded-full bg-brand-green-light/15 px-2 py-0.5 text-xs font-medium text-brand-green-light">Available</span>
+          </div>
+
+          <!-- Edge — compatible -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+              <path d="M7 13c0-3 2.5-5 5-5s4 1.5 4 3.5c0 1.5-1 2.5-3 2.5H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-primary"/>
+            </svg>
+            <span class="text-sm font-medium">Edge</span>
+            <span class="inline-flex items-center rounded-full bg-brand-green-light/15 px-2 py-0.5 text-xs font-medium text-brand-green-light">Compatible</span>
+          </div>
+
+          <!-- Brave — compatible -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0">
+              <path d="M12 2L4 6v6c0 5.25 3.4 10.2 8 12 4.6-1.8 8-6.75 8-12V6l-8-4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" class="text-primary/40"/>
+              <path d="M12 8l3 2-1.5 3L12 14l-1.5-1L9 10l3-2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" class="text-primary"/>
+            </svg>
+            <span class="text-sm font-medium">Brave</span>
+            <span class="inline-flex items-center rounded-full bg-brand-green-light/15 px-2 py-0.5 text-xs font-medium text-brand-green-light">Compatible</span>
+          </div>
+
+          <!-- Arc — compatible -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+              <path d="M8 16c1-3 2-6 4-8 2 2 3 5 4 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-primary"/>
+            </svg>
+            <span class="text-sm font-medium">Arc</span>
+            <span class="inline-flex items-center rounded-full bg-brand-green-light/15 px-2 py-0.5 text-xs font-medium text-brand-green-light">Compatible</span>
+          </div>
+
+          <!-- Firefox — coming soon -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" class="text-primary/20"/>
+              <path d="M15 9.5c-.5-2-2.5-3-4.5-2.5C8.5 7.5 7 9.5 7 12c0 2.75 2.25 5 5 5 2.5 0 4.5-1.75 4.9-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-primary/40"/>
+            </svg>
+            <span class="text-sm font-medium text-muted-foreground">Firefox</span>
+            <span class="inline-flex items-center rounded-full bg-brand-coral/10 px-2 py-0.5 text-xs font-medium text-brand-coral">Coming soon</span>
+          </div>
+
+          <!-- Safari — coming soon -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" class="text-primary/20"/>
+              <path d="M16.24 7.76l-5.12 3.12-3.12 5.12 5.12-3.12 3.12-5.12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" class="text-primary/40"/>
+            </svg>
+            <span class="text-sm font-medium text-muted-foreground">Safari</span>
+            <span class="inline-flex items-center rounded-full bg-brand-coral/10 px-2 py-0.5 text-xs font-medium text-brand-coral">Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h2 class="font-serif text-3xl font-normal italic text-primary mb-10 animate-on-scroll">
+          Common questions
+        </h2>
+
+        <div class="space-y-8 stagger-children">
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">Is it free?</h3>
+            <p class="text-muted-foreground">
+              Yes. The browser extension and mobile app are completely free. You can save
+              content, organise it into collections, and access everything across your devices
+              at no cost.
+            </p>
+          </div>
+
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">Which browsers are supported?</h3>
+            <p class="text-muted-foreground">
+              The extension works with Chrome, Brave, Arc, Edge, Vivaldi, and any other
+              Chromium-based browser. Install it from the Chrome Web Store and it works
+              straight away. Firefox and Safari extensions are on the way.
+            </p>
+          </div>
+
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">What data does the extension collect?</h3>
+            <p class="text-muted-foreground">
+              Only the pages you explicitly save. We don&rsquo;t track your browsing, collect
+              data in the background, or sell any information. The extension sits quietly until
+              you click it.
+            </p>
+          </div>
+
+          <div class="animate-on-scroll">
+            <h3 class="font-semibold mb-1">Do I need to install anything on my phone?</h3>
+            <p class="text-muted-foreground">
+              No app download is required. You can use Epic Itineraries directly in your mobile
+              browser and use the share sheet to save content. For the best experience, add it to
+              your home screen &mdash; instructions are above.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <BottomCTA />
+  </main>
+  <Footer />
+</BaseLayout>
