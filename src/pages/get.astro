@@ -4,8 +4,6 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import { APP_URL } from '../config';
-
-const chromeExtensionUrl = '#chrome-web-store';
 ---
 
 <BaseLayout
@@ -47,9 +45,9 @@ const chromeExtensionUrl = '#chrome-web-store';
               Install the browser extension. One click saves the page &mdash; title, image,
               and content type captured automatically.
             </p>
-            <a
-              href={chromeExtensionUrl}
-              class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-all hover:bg-brand-green-light hover:scale-105 duration-200"
+            <span
+              class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-primary/50 px-6 text-sm font-medium text-primary-foreground cursor-default"
+              aria-disabled="true"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -58,8 +56,8 @@ const chromeExtensionUrl = '#chrome-web-store';
                 <line x1="3.95" x2="8.54" y1="6.06" y2="14"></line>
                 <line x1="10.88" x2="15.46" y1="21.94" y2="14"></line>
               </svg>
-              Install for Chrome &mdash; Free
-            </a>
+              Chrome Extension &mdash; Coming Soon
+            </span>
           </div>
 
           <!-- On your phone -->
@@ -117,7 +115,7 @@ const chromeExtensionUrl = '#chrome-web-store';
             <ol class="space-y-3 text-sm text-muted-foreground">
               <li class="flex items-start gap-3">
                 <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">1</span>
-                <span>Open <strong class="text-foreground">epic-itineraries.com</strong> in Safari</span>
+                <span>Open <a href="https://epic-itineraries.com" class="font-bold text-foreground underline underline-offset-2">epic-itineraries.com</a> in Safari</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">2</span>
@@ -146,7 +144,7 @@ const chromeExtensionUrl = '#chrome-web-store';
             <ol class="space-y-3 text-sm text-muted-foreground">
               <li class="flex items-start gap-3">
                 <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">1</span>
-                <span>Open <strong class="text-foreground">epic-itineraries.com</strong> in Chrome</span>
+                <span>Open <a href="https://epic-itineraries.com" class="font-bold text-foreground underline underline-offset-2">epic-itineraries.com</a> in Chrome</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="flex h-6 w-6 items-center justify-center rounded-full bg-brand-coral text-white text-xs font-semibold shrink-0 mt-0.5">2</span>
@@ -254,9 +252,9 @@ const chromeExtensionUrl = '#chrome-web-store';
           <div class="animate-on-scroll">
             <h3 class="font-semibold mb-1">Is it free?</h3>
             <p class="text-muted-foreground">
-              Yes. The browser extension and mobile app are completely free. You can save
-              content, organise it into collections, and access everything across your devices
-              at no cost.
+              Yes. The browser extension, mobile app, and saving content are completely free.
+              Free accounts include one collection and basic features. Pro unlocks unlimited
+              collections, more AI itinerary generations, and additional features.
             </p>
           </div>
 
