@@ -9,7 +9,7 @@ const chromeExtensionUrl = 'https://chromewebstore.google.com/detail/epic-itiner
 
 <BaseLayout
   title="Browser Extension | Epic Itineraries"
-  description="Save travel content from any website in one click. The Epic Itineraries browser extension captures articles, videos, hotel listings, and restaurant reviews automatically."
+  description="Save travel content from any website in one click. The Epic Itineraries browser extension works with Chrome, Brave, Arc, Edge, Vivaldi and other Chromium browsers."
 >
   <Header transparent={false} />
   <main class="pt-24">
@@ -24,7 +24,7 @@ const chromeExtensionUrl = 'https://chromewebstore.google.com/detail/epic-itiner
           something worth saving. One click captures the page with all its metadata &mdash; title,
           image, content type &mdash; ready to organise.
         </p>
-        <div class="flex flex-wrap items-center gap-4 animate-on-scroll">
+        <div class="flex flex-wrap items-center gap-4 mb-10 animate-on-scroll">
           <a
             href={chromeExtensionUrl}
             class="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-medium text-primary-foreground transition-all hover:bg-brand-green-light hover:scale-105 duration-200"
@@ -36,7 +36,7 @@ const chromeExtensionUrl = 'https://chromewebstore.google.com/detail/epic-itiner
               <line x1="3.95" x2="8.54" y1="6.06" y2="14"></line>
               <line x1="10.88" x2="15.46" y1="21.94" y2="14"></line>
             </svg>
-            Install for Chrome &mdash; Free
+            Install from Chrome Web Store &mdash; Free
           </a>
           <a
             href="/how-it-works"
@@ -44,6 +44,73 @@ const chromeExtensionUrl = 'https://chromewebstore.google.com/detail/epic-itiner
           >
             See how it works &rarr;
           </a>
+        </div>
+
+        <!-- Supported browsers -->
+        <div class="animate-on-scroll">
+          <p class="text-sm font-medium text-muted-foreground mb-4">Works with your favourite browser</p>
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+            <!-- Chrome -->
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="shrink-0">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5" class="text-primary"/>
+                <line x1="21.17" x2="12" y1="8" y2="8" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+                <line x1="3.95" x2="8.54" y1="6.06" y2="14" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+                <line x1="10.88" x2="15.46" y1="21.94" y2="14" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+              </svg>
+              <span class="text-sm font-medium text-foreground">Chrome</span>
+            </div>
+            <!-- Brave -->
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="shrink-0">
+                <path d="M12 2L4 6v6c0 5.25 3.4 10.2 8 12 4.6-1.8 8-6.75 8-12V6l-8-4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" class="text-primary/40"/>
+                <path d="M12 8l3 2-1.5 3L12 14l-1.5-1L9 10l3-2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" class="text-primary"/>
+              </svg>
+              <span class="text-sm font-medium text-foreground">Brave</span>
+            </div>
+            <!-- Arc -->
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="shrink-0">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+                <path d="M8 16c1-3 2-6 4-8 2 2 3 5 4 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-primary"/>
+              </svg>
+              <span class="text-sm font-medium text-foreground">Arc</span>
+            </div>
+            <!-- Edge -->
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="shrink-0">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+                <path d="M7 13c0-3 2.5-5 5-5s4 1.5 4 3.5c0 1.5-1 2.5-3 2.5H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-primary"/>
+              </svg>
+              <span class="text-sm font-medium text-foreground">Edge</span>
+            </div>
+            <!-- Vivaldi -->
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="shrink-0">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+                <path d="M12 6c-2 3-3 5-3 7s1.5 3 3 3 3-1 3-3-1-4-3-7Z" stroke="currentColor" stroke-width="1.5" class="text-primary"/>
+              </svg>
+              <span class="text-sm font-medium text-foreground">Vivaldi</span>
+            </div>
+            <!-- Other Chromium -->
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-primary/40">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 12h8M12 8v8" class="text-primary"/>
+              </svg>
+              <span class="text-sm text-muted-foreground">+ other Chromium browsers</span>
+            </div>
+          </div>
+          <p class="text-sm text-muted-foreground mt-4">
+            <span class="inline-flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral shrink-0">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+              Firefox extension coming soon.
+            </span>
+          </p>
         </div>
       </div>
     </section>
@@ -247,8 +314,8 @@ const chromeExtensionUrl = 'https://chromewebstore.google.com/detail/epic-itiner
           <div class="animate-on-scroll">
             <h3 class="font-semibold mb-1">Which browsers?</h3>
             <p class="text-muted-foreground">
-              Chrome and Chromium-based browsers (Edge, Brave, Arc). Safari and Firefox are on the
-              roadmap.
+              Chrome, Brave, Arc, Edge, Vivaldi, and any other Chromium-based browser. Install it
+              from the Chrome Web Store and it works straight away. A Firefox extension is on the way.
             </p>
           </div>
 
