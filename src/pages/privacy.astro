@@ -12,63 +12,101 @@ import Footer from '../components/Footer.astro';
   <main class="flex-1 pt-24">
     <div class="container max-w-3xl py-12">
       <h1 class="font-serif text-4xl font-normal italic text-primary mb-8">
-        Privacy Policy
+        Privacy policy
       </h1>
 
       <div class="max-w-none">
         <p class="text-lg text-muted-foreground mb-8">
-          Last updated: January 2026
+          Last updated: February 2026
         </p>
 
         <section class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">Overview</h2>
           <p class="text-muted-foreground">
-            Epic Itineraries (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is committed to protecting your privacy.
-            This Privacy Policy explains how we collect, use, and safeguard your information
-            when you use our travel research platform.
+            Your travel research is personal. We treat it that way. This policy explains what
+            we collect, why, and what happens to it. No surprises.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">Information We Collect</h2>
+          <h2 class="text-2xl font-semibold mb-4">What we collect</h2>
           <ul class="list-disc list-inside space-y-2 text-muted-foreground">
             <li>
-              <strong>Account information:</strong> Email address and authentication details
-              when you create an account.
+              <strong>Account details:</strong> Your email address when you sign up.
             </li>
             <li>
-              <strong>Content you save:</strong> URLs, titles, and metadata of links you save
-              to your collections.
+              <strong>Content you save:</strong> URLs, page titles, collection names, notes,
+              and travel preferences you add to your account.
             </li>
             <li>
-              <strong>Usage data:</strong> How you interact with our service to improve the
-              user experience.
+              <strong>Browser extension data:</strong> When you click save in our extension,
+              we capture the URL and page title of that page.
+            </li>
+            <li>
+              <strong>Analytics:</strong> Basic usage data (pages visited, features used) via
+              PostHog, hosted in the EU. You can disable analytics cookies in your browser.
             </li>
           </ul>
         </section>
 
         <section class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">How We Use Your Information</h2>
+          <h2 class="text-2xl font-semibold mb-4">How we use it</h2>
           <ul class="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>To provide and maintain our service</li>
-            <li>To personalise your experience</li>
-            <li>To communicate with you about your account</li>
-            <li>To improve our platform</li>
+            <li>To run the service: storing your saved content, authenticating your account, displaying your collections.</li>
+            <li>To extract metadata: when you save a URL, we send it to Jina Reader API to pull in titles, descriptions, and images.</li>
+            <li>To generate itineraries: if you choose to use our AI features, your collection data is sent to Google Gemini. This is opt-in &mdash; it only happens when you ask for it.</li>
+            <li>To improve the product: anonymous analytics help us understand which features people use.</li>
           </ul>
         </section>
 
         <section class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">Data Security</h2>
-          <p class="text-muted-foreground">
-            We implement appropriate security measures to protect your personal information.
-            Your data is stored securely using industry-standard encryption and access controls.
+          <h2 class="text-2xl font-semibold mb-4">Third parties</h2>
+          <p class="text-muted-foreground mb-4">
+            We use a small number of services to run Epic Itineraries:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-muted-foreground">
+            <li><strong>Supabase</strong> (EU region) &mdash; database and authentication</li>
+            <li><strong>Vercel</strong> &mdash; hosting</li>
+            <li><strong>Jina Reader API</strong> &mdash; extracting metadata from saved URLs</li>
+            <li><strong>Google Gemini</strong> &mdash; AI itinerary generation (opt-in only)</li>
+            <li><strong>PostHog</strong> (EU instance) &mdash; analytics</li>
+          </ul>
+          <p class="text-muted-foreground mt-4">
+            We do not sell your data. We do not share it with advertisers. These services
+            only receive what they need to do their job.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+          <h2 class="text-2xl font-semibold mb-4">Cookies</h2>
           <p class="text-muted-foreground">
-            If you have questions about this Privacy Policy, please contact us at
+            We use authentication cookies (Supabase) to keep you logged in, and analytics
+            cookies (PostHog) to understand how the product is used. You can disable analytics
+            cookies in your browser settings without affecting how the app works.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Your data, your control</h2>
+          <p class="text-muted-foreground">
+            Your content stays until you delete it. When you delete something, it&rsquo;s
+            soft-deleted and permanently removed after 30 days. You can export or delete
+            all your data at any time. Our primary database is hosted in the EU (Supabase
+            EU region), in line with GDPR requirements.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Changes</h2>
+          <p class="text-muted-foreground">
+            If we update this policy, we&rsquo;ll note the date at the top. For significant
+            changes, we&rsquo;ll let you know by email.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">Questions?</h2>
+          <p class="text-muted-foreground">
+            Reach us at
             <a
               href="mailto:hello@epic-itineraries.com"
               class="text-primary hover:underline"
