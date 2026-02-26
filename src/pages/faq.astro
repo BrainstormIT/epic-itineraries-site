@@ -8,63 +8,59 @@ import { APP_URL } from '../config';
 const faqs = [
   {
     question: 'Is Epic Itineraries free?',
-    answer: 'Yes. The core product is free to use &mdash; save content, organise collections, and generate itineraries at no cost. No credit card required to get started. We may introduce premium features in the future, but the fundamentals will always be free.',
+    answer: 'Yes, you can get started for free &mdash; no credit card, no trial that expires. Free accounts include one collection, three AI itinerary generations per month, and the ability to save content from anywhere. If you find yourself wanting more collections or more AI generations, there&rsquo;s a Pro plan for that. But plenty of people will never need it, and that&rsquo;s fine by us.',
   },
   {
     question: 'Do I need to create an account?',
-    answer: 'Yes, you&rsquo;ll need an account so your saved content is stored and accessible across devices. Sign-up is quick &mdash; you can use your email or sign in with Google.',
+    answer: 'Yes, you&rsquo;ll need an account so your saved content stays with you across devices. Sign-up is quick &mdash; email or Google, and you&rsquo;re in.',
   },
   {
-    question: 'How does the browser extension work?',
-    answer: 'Install the extension from the Chrome Web Store, and you&rsquo;ll see a save button when browsing the web. Click it, choose a collection (or create one on the spot), and the page is saved to your Epic Itineraries library. The extension grabs the title, image, and metadata automatically.',
+    question: 'How do I save content?',
+    answer: 'Right now, there are two ways. On your phone, use the share sheet &mdash; the same button you&rsquo;d use to send a link to a friend, except you share it to Epic Itineraries instead. On desktop, paste a URL directly into the web app. We&rsquo;re also building a browser extension that will let you save pages with a single click while browsing &mdash; that&rsquo;s coming soon.',
   },
   {
     question: 'Can I use Epic Itineraries on my phone?',
-    answer: 'Yes. Epic Itineraries is a web app that works on any device with a browser. On mobile, you can save content using your phone&rsquo;s share sheet &mdash; the same way you&rsquo;d share a link with a friend. Install it as a PWA (progressive web app) for the best experience: add it to your home screen and it behaves like a native app.',
+    answer: 'Yes. It&rsquo;s a web app that works on any device with a browser, and on mobile you can save content using your phone&rsquo;s share sheet &mdash; the same way you&rsquo;d share a link with a friend. For the best experience, add it to your home screen as a PWA (progressive web app). It&rsquo;ll behave like a native app without needing an app store.',
   },
   {
     question: 'What types of content can I save?',
-    answer: 'Anything with a URL. Blog posts, YouTube videos, TripAdvisor pages, Airbnb listings, Booking.com hotels, restaurant reviews, social media posts &mdash; if it&rsquo;s on the web, you can save it. We automatically detect the content type (article, video, restaurant, accommodation) and tag it accordingly.',
+    answer: 'Anything with a URL. Blog posts, YouTube videos, TripAdvisor pages, Airbnb listings, restaurant reviews, social media posts &mdash; if it&rsquo;s on the web, you can save it. We detect the content type automatically and tag it accordingly, so a hotel listing looks different from a restaurant recommendation in your collection.',
   },
   {
     question: 'What does the AI actually do?',
-    answer: 'The AI reads all the content you&rsquo;ve saved in a collection and organises it into a day-by-day itinerary. It identifies places, activities, restaurants, and accommodation from your sources and arranges them into a logical plan. It does not invent or add recommendations you didn&rsquo;t save. Every item traces back to a real source you collected.',
-  },
-  {
-    question: 'Will the AI make up places or recommendations?',
-    answer: 'No. This is a firm principle. The AI only works with content you&rsquo;ve saved. It won&rsquo;t add restaurants you didn&rsquo;t find, attractions it thinks you should visit, or filler recommendations. If it&rsquo;s in your itinerary, it came from your research.',
+    answer: 'It reads the content you&rsquo;ve saved in a collection &mdash; the blog posts, videos, reviews, listings &mdash; and organises everything into a day-by-day itinerary. It identifies places, activities, restaurants, and accommodation from your sources and arranges them into a plan that makes geographic and practical sense. And here&rsquo;s what it won&rsquo;t do: it won&rsquo;t invent places, add filler recommendations, or suggest things you didn&rsquo;t find yourself. Every item in your itinerary traces back to something you saved. Your research, structured.',
   },
   {
     question: 'Do content creators get credited?',
-    answer: 'Yes, always. Every recommendation in your itinerary links back to the original source &mdash; the blog post, video, or guide it came from. We believe the people who create great travel content deserve visibility, and we&rsquo;ve built that into the product.',
+    answer: 'Yes, always. Every recommendation in your itinerary links back to the original source &mdash; the blog post, video, or guide it came from. The people who create great travel content deserve that visibility, and we think it makes your itinerary more useful too. You can always go back to the original for more detail.',
   },
   {
     question: 'How is my data handled?',
-    answer: 'We store the URLs, titles, and metadata of the content you save, along with the extracted text so our AI can read it. Your data is stored securely and is not shared with third parties. We use analytics to improve the product, but your saved content is yours. See our privacy policy for full details.',
+    answer: 'We store the URLs, titles, and metadata of the content you save, along with the extracted text so our AI can read it. Your data is not shared with third parties. We use analytics to improve the product, but your saved content is yours. See our privacy policy for the full details.',
   },
   {
     question: 'Can I share my itinerary or collection with others?',
-    answer: 'Yes. You can share collections and generated itineraries with others via a link. This is handy for group trips where everyone wants to contribute finds or review the plan together.',
+    answer: 'Yes. You can share collections and generated itineraries via a link &mdash; handy for group trips where everyone wants to contribute finds or review the plan together.',
   },
   {
     question: 'Do I need to have a destination picked before I start?',
-    answer: 'Not at all. One of the best things about Epic Itineraries is that you can start saving content before you&rsquo;ve decided where to go. Build a general inspiration collection, and when a trip takes shape, move the relevant content into a trip-specific collection.',
+    answer: 'Not at all. You can start saving content before you&rsquo;ve decided where to go &mdash; that&rsquo;s actually one of the best ways to use it. Build a general inspiration collection, and when a trip takes shape, move the relevant bits into a trip-specific collection.',
   },
   {
     question: 'What browsers are supported?',
-    answer: 'The web app works in any modern browser &mdash; Chrome, Safari, Firefox, Edge. The browser extension is currently available for Chrome and Chromium-based browsers (Edge, Brave, Arc). Safari and Firefox extensions are on the roadmap.',
+    answer: 'The web app works in any modern browser &mdash; Chrome, Safari, Firefox, Edge, you name it. The browser extension is coming soon, starting with Chrome and Chromium-based browsers (Edge, Brave, Arc), with Safari and Firefox after that.',
   },
   {
     question: 'Is there an app I can download?',
-    answer: 'Epic Itineraries is a progressive web app (PWA). You can install it directly from your browser &mdash; add it to your home screen on mobile or install it from the address bar on desktop. It works offline for viewing your saved content and feels like a native app.',
+    answer: 'Epic Itineraries is a progressive web app (PWA), which means you can install it directly from your browser &mdash; add it to your home screen on mobile or install it from the address bar on desktop. No app store needed. It looks and feels like a native app.',
   },
   {
     question: 'How do I get in touch?',
-    answer: 'Email us at <a href="mailto:hello@epic-itineraries.com" class="text-primary hover:underline">hello@epic-itineraries.com</a>. We&rsquo;d love to hear from you &mdash; whether it&rsquo;s feedback, a feature request, or a bug report.',
+    answer: 'Email us at <a href="mailto:hello@epic-itineraries.com" class="text-primary hover:underline">hello@epic-itineraries.com</a>. Whether it&rsquo;s feedback, a feature request, or a bug report &mdash; we read everything and we&rsquo;re genuinely happy to hear from people who use this.',
   },
   {
     question: 'Who built this?',
-    answer: 'Epic Itineraries is built by Edwin van Leeuwen at <a href="https://brainstorm-it.nl" class="text-primary hover:underline">Brainstorm IT</a>, a small product studio based in the Netherlands. It started as a personal side project born from the frustration of losing great travel finds across too many apps.',
+    answer: 'Epic Itineraries is built by Edwin van Leeuwen at <a href="https://brainstorm-it.nl" class="text-primary hover:underline">Brainstorm IT</a>, a small product studio in the Netherlands. The idea started over a decade ago &mdash; two friends, some beers, and a shared enthusiasm for trip research that kept getting lost across too many apps. It sat as an idea for years, too big to start. What changed was the approach: think big, start small, move fast. We built it because we wanted to use it, and we think others might too.',
   },
 ];
 ---
@@ -172,7 +168,7 @@ const faqs = [
               We&rsquo;re happy to help. Reach out at
               <a href="mailto:hello@epic-itineraries.com" class="underline hover:text-white transition-colors">
                 hello@epic-itineraries.com</a>,
-              or just dive in &mdash; it&rsquo;s free.
+              or just give it a go &mdash; it&rsquo;s free to start.
             </p>
             <a
               href={APP_URL}
