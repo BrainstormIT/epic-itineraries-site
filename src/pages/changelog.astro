@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const versions = [
+  {
+    version: '1.0',
+    date: '26 February 2026',
+    title: 'Launch',
+    description: 'The one where we opened the doors.',
+    changes: [
+      'Freemium tiers — free for casual explorers, Pro for power users',
+      'Dashboard onboarding flow to get you saving in seconds',
+      'MCP integration for any AI client — ChatGPT, Claude, Copilot, you name it',
+      'API key management so you control your integrations',
+      'Platform extractors for TikTok, YouTube Shorts, and Reddit',
+      'AI-powered collection suggestions based on your saved links',
+      'Enhanced Jina metadata for richer link previews',
+      'Security hardening across the board',
+    ],
+  },
+  {
+    version: '0.6',
+    date: '13 February 2026',
+    title: 'Launch Prep',
+    description: 'Polish, polish, polish.',
+    changes: [
+      'Browser extension ready for the Chrome Web Store',
+      'Cross-browser testing — Chrome, Edge, Brave, Firefox',
+      'UI polish and consistency pass across every screen',
+    ],
+  },
+  {
+    version: '0.5',
+    date: '4 February 2026',
+    title: 'Itinerary Editing',
+    description: 'Your itineraries, your way.',
+    changes: [
+      'Full itinerary editing — drag, drop, reorder, refine',
+      'Collection descriptions visible on shared pages',
+      'Mobile experience improvements for on-the-go planning',
+      'Discover page fixes and refinements',
+    ],
+  },
+  {
+    version: '0.4',
+    date: '27 January 2026',
+    title: 'AI & Personalisation',
+    description: 'Smarter suggestions, tailored to how you travel.',
+    changes: [
+      'Public REST API for developers and integrations',
+      'ChatGPT MCP integration — ask your AI about your saved links',
+      'Vote and react on shared collections',
+      'Trip personality — tell us about your travel style, who you travel with, kids\u2019 ages',
+      'Returning user settings that remember your preferences',
+      'Collection tabs for better organisation',
+    ],
+  },
+  {
+    version: '0.3',
+    date: '9 January 2026',
+    title: 'Power Users',
+    description: 'For the keyboard warriors and bulk savers.',
+    changes: [
+      'Keyboard shortcuts for fast navigation',
+      'Command palette — find anything instantly',
+      'Quick-add bar for rapid link saving',
+      'Bulk link saving — paste multiple URLs at once',
+      'Optimistic UI for instant-feeling interactions',
+    ],
+  },
+  {
+    version: '0.2',
+    date: '31 December 2025',
+    title: 'Engagement',
+    description: 'Making the experience feel alive.',
+    changes: [
+      'Notifications — know when someone interacts with your collections',
+      'Badge system to reward your collecting habits',
+      'Confetti celebrations when you hit milestones',
+      'AI itinerary nudge — a gentle prompt when your collection is ready for a plan',
+      'Richer metadata: language detection, author extraction, preview images',
+    ],
+  },
+  {
+    version: '0.1',
+    date: '27 December 2025',
+    title: 'Foundation',
+    description: 'Where it all began.',
+    changes: [
+      'Authentication and user accounts',
+      'Collections — group your saved links by trip or theme',
+      'Link saving with automatic metadata extraction',
+      'Browser extension for one-click saving',
+      'PWA with share target — save from any app on your phone',
+      'Dashboard with your collections at a glance',
+      'Search across all your saved content',
+      'Settings and preferences',
+      'Discover feed — explore what other travellers are collecting',
+      'Sharing and collaboration on collections',
+      'Smart tagging powered by AI',
+      'Bookmark import from your browser',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Changelog | Epic Itineraries"
+  description="See what's new in Epic Itineraries. Every feature, improvement, and milestone — from foundation to launch."
+>
+  <Header transparent={false} />
+  <main class="pt-24">
+    <!-- Intro -->
+    <section class="py-16 md:py-24">
+      <div class="container max-w-3xl">
+        <h1 class="font-serif text-4xl font-normal italic text-primary mb-4 md:text-5xl animate-on-scroll">
+          What we&rsquo;ve been building
+        </h1>
+        <p class="text-lg text-muted-foreground animate-on-scroll">
+          Epic Itineraries moves fast. Here&rsquo;s everything we&rsquo;ve shipped &mdash;
+          from the first saved link to the features you&rsquo;re using today.
+        </p>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="pb-16 md:pb-24">
+      <div class="container max-w-3xl">
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-border md:left-8" aria-hidden="true"></div>
+
+          {versions.map((v, i) => (
+            <div class="relative pl-12 pb-12 md:pl-20 animate-on-scroll" id={`v${v.version.replace('.', '-')}`}>
+              <!-- Timeline dot -->
+              <div class:list={[
+                'absolute left-2.5 top-1 h-3 w-3 rounded-full border-2 border-background md:left-6.5',
+                i === 0 ? 'bg-brand-coral' : 'bg-primary/40',
+              ]} aria-hidden="true" />
+
+              <!-- Version card -->
+              <div class:list={[
+                'rounded-lg border p-6',
+                i === 0 ? 'border-brand-coral/30 bg-brand-coral/5' : 'border-border bg-card',
+              ]}>
+                <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+                  <span class="font-serif text-2xl font-normal italic text-primary">
+                    v{v.version}
+                  </span>
+                  <span class="text-sm font-medium text-brand-coral">{v.title}</span>
+                </div>
+                <p class="text-xs text-muted-foreground mb-4">{v.date}</p>
+                <p class="text-muted-foreground mb-4">{v.description}</p>
+                <ul class="space-y-2">
+                  {v.changes.map((change) => (
+                    <li class="flex gap-2 text-sm text-muted-foreground">
+                      <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/30" aria-hidden="true" />
+                      {change}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="py-16 bg-brand-cream-dark">
+      <div class="container max-w-3xl text-center animate-on-scroll">
+        <h2 class="font-serif text-2xl font-normal italic text-primary mb-4">
+          And we&rsquo;re just getting started.
+        </h2>
+        <p class="text-muted-foreground mb-6">
+          Got a feature request or spotted something off? We&rsquo;d love to hear from you.
+        </p>
+        <a
+          href="mailto:hello@epic-itineraries.com"
+          class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          Get in touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
