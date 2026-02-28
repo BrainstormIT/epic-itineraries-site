@@ -12,6 +12,9 @@ interface Props {
 const { transparent = true } = Astro.props;
 ---
 
+<!-- Checkbox must precede header so CSS ~ sibling selector can toggle icons -->
+<input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox sr-only" aria-hidden="true" />
+
 <header
   id="site-header"
   class:list={[
@@ -91,7 +94,6 @@ const { transparent = true } = Astro.props;
 </header>
 
 <!-- Mobile menu (checkbox hack for zero-JS) -->
-<input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox sr-only" aria-hidden="true" />
 <div class="mobile-menu-overlay md:hidden" aria-label="Mobile navigation">
   <nav class="flex flex-col gap-2 p-6 pt-20">
     <a href="/how-it-works" class="text-lg font-medium text-primary py-3 border-b border-border transition-colors hover:text-brand-coral">
