@@ -1,14 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import BottomCTA from '../components/BottomCTA.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BottomCTA from '../../components/BottomCTA.astro';
 import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection('blog', ({ data }) => {
-  const isPublished = import.meta.env.PROD ? !data.draft : true;
-  const isInspiration = data.tags.includes('inspiration');
-  return isPublished && isInspiration;
+const allPosts = await getCollection('inspiration', ({ data }) => {
+  return import.meta.env.PROD ? !data.draft : true;
 });
 
 const posts = allPosts.toSorted(
@@ -85,7 +83,7 @@ const estimateReadingTime = (description: string) => {
           <div class="grid gap-6 stagger-children">
             {posts.map((post) => (
               <a
-                href={`/blog/${post.id}`}
+                href={`/inspiration/${post.id}`}
                 class="group block overflow-hidden rounded-2xl bg-card shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 animate-on-scroll"
               >
                 <div class="flex flex-col sm:flex-row">
