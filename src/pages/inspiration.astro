@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BottomCTA from '../components/BottomCTA.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  const isPublished = import.meta.env.PROD ? !data.draft : true;
+  const isInspiration = data.tags.includes('inspiration');
+  return isPublished && isInspiration;
+});
+
+const posts = allPosts.toSorted(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
+// Reading time estimate
+const estimateReadingTime = (description: string) => {
+  // Rough estimate based on the content type — these are long curated guides
+  return '8 min read';
+};
+---
+
+<BaseLayout
+  title="Inspiration | Epic Itineraries"
+  description="Curated travel guides built from the best content on the web. Train routes, food destinations, hidden gems, and more — researched, organised, and ready to explore."
+>
+  <Header transparent={false} />
+
+  <main class="pt-24">
+    <!-- Page header -->
+    <section class="py-16 md:py-20">
+      <div class="container max-w-5xl">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-2 mb-5 animate-on-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+            </svg>
+            <span class="text-sm font-medium text-brand-coral uppercase tracking-wider">Curated Guides</span>
+          </div>
+
+          <h1 class="font-serif text-4xl font-normal italic text-primary mb-4 md:text-5xl animate-on-scroll">
+            Inspiration
+          </h1>
+          <p class="text-lg text-muted-foreground max-w-2xl leading-relaxed animate-on-scroll">
+            The best travel content on the web, curated into themed guides. Each collection is
+            researched, organised, and ready to explore — or save to your own library.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts grid -->
+    <section class="pb-16 md:pb-24">
+      <div class="container max-w-5xl">
+        {posts.length === 0 ? (
+          <div class="text-center py-20 animate-on-scroll">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="mx-auto text-muted-foreground/40 mb-6"
+            >
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+            </svg>
+            <p class="text-muted-foreground text-lg">
+              Curated guides are on their way. Check back soon.
+            </p>
+          </div>
+        ) : (
+          <div class="grid gap-6 stagger-children">
+            {posts.map((post) => (
+              <a
+                href={`/blog/${post.id}`}
+                class="group block overflow-hidden rounded-2xl bg-card shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 animate-on-scroll"
+              >
+                <div class="flex flex-col sm:flex-row">
+                  {/* Gradient accent strip */}
+                  <div class="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 overflow-hidden">
+                    <div class="h-3 sm:h-full sm:w-full bg-gradient-to-br from-brand-cream-dark via-brand-coral/10 to-brand-green/10">
+                      <div
+                        class="absolute inset-0 opacity-[0.04]"
+                        style="background-image: radial-gradient(circle, oklch(0.35 0.06 160) 1px, transparent 1px); background-size: 20px 20px;"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="hidden sm:block absolute bottom-4 right-4 text-brand-coral/20"
+                      >
+                        <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div class="flex-1 p-5 md:p-6 lg:p-8">
+                    {/* Tags */}
+                    {post.data.tags.length > 0 && (
+                      <div class="flex flex-wrap gap-1.5 mb-3">
+                        {post.data.tags.filter((tag: string) => tag !== 'inspiration').slice(0, 3).map((tag: string) => (
+                          <span class="inline-flex items-center rounded-full bg-brand-cream-dark px-2.5 py-0.5 text-[11px] font-medium text-muted-foreground">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <h2 class="font-serif text-xl md:text-2xl font-normal italic text-primary leading-snug mb-2 transition-colors group-hover:text-brand-green-light">
+                      {post.data.title}
+                    </h2>
+
+                    <p class="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">
+                      {post.data.description}
+                    </p>
+
+                    <div class="flex items-center gap-3 text-xs text-muted-foreground/70">
+                      <time datetime={post.data.publishDate.toISOString()}>
+                        {formatDate(post.data.publishDate)}
+                      </time>
+                      <span class="inline-flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        Curated collection
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <BottomCTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
