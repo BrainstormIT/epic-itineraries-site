@@ -173,7 +173,7 @@ import { APP_URL } from '../config';
           What&rsquo;s coming.
         </h2>
         <p class="text-muted-foreground mb-8 animate-on-scroll">
-          The extension works on all Chromium browsers today. We&rsquo;re expanding support.
+          The extension works on Chromium browsers and Firefox today. We&rsquo;re expanding support.
         </p>
 
         <div class="flex flex-wrap items-center gap-3 stagger-children">
@@ -225,15 +225,20 @@ import { APP_URL } from '../config';
             <span class="inline-flex items-center rounded-full bg-brand-green-light/15 px-2 py-0.5 text-xs font-medium text-brand-green-light">Compatible</span>
           </div>
 
-          <!-- Firefox — coming soon -->
-          <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
+          <!-- Firefox — available -->
+          <a
+            href="https://addons.mozilla.org/addon/epic-itineraries/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll hover:shadow-lg transition-shadow cursor-pointer"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" class="text-primary/20"/>
-              <path d="M15 9.5c-.5-2-2.5-3-4.5-2.5C8.5 7.5 7 9.5 7 12c0 2.75 2.25 5 5 5 2.5 0 4.5-1.75 4.9-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-primary/40"/>
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" class="text-primary/40"/>
+              <path d="M15 9.5c-.5-2-2.5-3-4.5-2.5C8.5 7.5 7 9.5 7 12c0 2.75 2.25 5 5 5 2.5 0 4.5-1.75 4.9-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-primary"/>
             </svg>
-            <span class="text-sm font-medium text-muted-foreground">Firefox</span>
-            <span class="inline-flex items-center rounded-full bg-brand-coral/10 px-2 py-0.5 text-xs font-medium text-brand-coral">Coming soon</span>
-          </div>
+            <span class="text-sm font-medium">Firefox</span>
+            <span class="inline-flex items-center rounded-full bg-brand-green-light/15 px-2 py-0.5 text-xs font-medium text-brand-green-light">Available</span>
+          </a>
 
           <!-- Safari — coming soon -->
           <div class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2.5 shadow-sm animate-on-scroll">
@@ -366,7 +371,7 @@ import { APP_URL } from '../config';
             <p class="text-muted-foreground">
               The extension works with Chrome, Brave, Arc, Edge, Vivaldi, and any other
               Chromium-based browser. Install it from the <a href="https://chromewebstore.google.com/detail/iihdpfhfmikakdicajjdfkehbbkjckbd" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Chrome Web Store</a> and it works
-              straight away. Firefox and Safari extensions are on the way.
+              straight away. It&rsquo;s also available as a <a href="https://addons.mozilla.org/addon/epic-itineraries/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Firefox Add-on</a>. Safari support is on the way.
             </p>
           </div>
 
