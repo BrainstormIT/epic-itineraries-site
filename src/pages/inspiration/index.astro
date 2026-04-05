@@ -29,7 +29,7 @@ const estimateReadingTime = (description: string) => {
 
 <BaseLayout
   title="Inspiration | Epic Itineraries"
-  description="Curated travel guides built from the best content on the web. Train routes, food destinations, hidden gems, and more — researched, organised, and ready to explore."
+  description="7 curated destination guides for 2026: Salerno, Okinawa, Fès, European train routes, food travel, and hidden gems — researched from 50+ expert sources."
 >
   <Header transparent={false} />
 
@@ -87,28 +87,37 @@ const estimateReadingTime = (description: string) => {
                 class="group block overflow-hidden rounded-2xl bg-card shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 animate-on-scroll"
               >
                 <div class="flex flex-col sm:flex-row">
-                  {/* Gradient accent strip */}
+                  {/* Thumbnail or gradient accent strip */}
                   <div class="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 overflow-hidden">
-                    <div class="h-3 sm:h-full sm:w-full bg-gradient-to-br from-brand-cream-dark via-brand-coral/10 to-brand-green/10">
-                      <div
-                        class="absolute inset-0 opacity-[0.04]"
-                        style="background-image: radial-gradient(circle, oklch(0.35 0.06 160) 1px, transparent 1px); background-size: 20px 20px;"
+                    {post.data.heroImage ? (
+                      <img
+                        src={post.data.heroImage}
+                        alt=""
+                        class="h-48 sm:h-full w-full object-cover"
+                        loading="lazy"
                       />
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="hidden sm:block absolute bottom-4 right-4 text-brand-coral/20"
-                      >
-                        <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-                      </svg>
-                    </div>
+                    ) : (
+                      <div class="h-3 sm:h-full sm:w-full bg-gradient-to-br from-brand-cream-dark via-brand-coral/10 to-brand-green/10">
+                        <div
+                          class="absolute inset-0 opacity-[0.04]"
+                          style="background-image: radial-gradient(circle, oklch(0.35 0.06 160) 1px, transparent 1px); background-size: 20px 20px;"
+                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="hidden sm:block absolute bottom-4 right-4 text-brand-coral/20"
+                        >
+                          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                        </svg>
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}

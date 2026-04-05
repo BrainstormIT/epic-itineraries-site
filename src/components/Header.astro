@@ -34,6 +34,12 @@ const { transparent = true } = Astro.props;
     <!-- Desktop navigation -->
     <nav class="hidden md:flex items-center gap-6 text-sm">
       <a
+        href="/inspiration"
+        class="font-medium header-text-color transition-colors duration-300 hover:opacity-80"
+      >
+        Inspiration
+      </a>
+      <a
         href="/how-it-works"
         class="font-medium header-text-color transition-colors duration-300 hover:opacity-80"
       >
@@ -90,6 +96,9 @@ const { transparent = true } = Astro.props;
 <!-- Mobile menu (checkbox hack for zero-JS) -->
 <div class="mobile-menu-overlay md:hidden" aria-label="Mobile navigation">
   <nav class="flex flex-col gap-2 p-6 pt-20">
+    <a href="/inspiration" class="text-lg font-medium text-primary py-3 border-b border-border transition-colors hover:text-brand-coral">
+      Inspiration
+    </a>
     <a href="/how-it-works" class="text-lg font-medium text-primary py-3 border-b border-border transition-colors hover:text-brand-coral">
       How It Works
     </a>
