@@ -8,10 +8,31 @@
       to come &mdash; that&rsquo;s yours. We just make sure you don&rsquo;t lose any of it.
     </p>
 
-    <!-- Top row: 4 cards — the core product story -->
-    <div class="grid gap-6 md:gap-8 sm:grid-cols-2 mb-6 md:mb-8 stagger-children">
-      <!-- Card 1: Save & organise -->
-      <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+    <!-- Asymmetric grid: hero card (left, 2 rows) + 2 cards stacked right -->
+    <div class="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-12 mb-6 md:mb-8 stagger-children">
+
+      <!-- HERO: Research + Itinerary (merged) -->
+      <div class="md:col-span-2 lg:col-span-7 lg:row-span-2 rounded-[2rem] bg-brand-coral/[0.06] border-l-[6px] border-brand-coral p-8 lg:p-10 shadow-md hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+          </svg>
+        </div>
+        <span class="inline-block text-xs font-medium tracking-wide uppercase text-brand-coral mb-3">From finds to plans</span>
+        <h3 class="font-serif text-2xl lg:text-3xl font-medium text-primary mb-4">
+          Your taste runs the whole thing
+        </h3>
+        <p class="text-muted-foreground text-base lg:text-lg leading-relaxed">
+          Tell the research agent what you&rsquo;re after &mdash; best tapas in Barcelona,
+          rainy-day activities in Edinburgh, anything. It searches the web, scores what
+          it finds against your saves, and gets sharper the more you use it. When you&rsquo;re
+          ready, AI reads everything you&rsquo;ve collected and drafts a day-by-day itinerary
+          you can reshape however you like. Your research in, your trip out.
+        </p>
+      </div>
+
+      <!-- Save & organise -->
+      <div class="lg:col-span-5 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
             <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
@@ -30,47 +51,8 @@
         </p>
       </div>
 
-      <!-- Card 2: Research agent -->
-      <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.3-4.3"></path>
-            <path d="M11 8v6"></path>
-            <path d="M8 11h6"></path>
-          </svg>
-        </div>
-        <span class="inline-block text-xs font-medium tracking-wide uppercase text-brand-coral mb-3">Research on autopilot</span>
-        <h3 class="font-serif text-xl font-medium text-primary mb-3">
-          An assistant that learns your taste
-        </h3>
-        <p class="text-muted-foreground">
-          Ask the research agent to find the best restaurants in Barcelona or things to do
-          with kids in Rome. It searches the web, scores what it finds, and gets better
-          the more you save and dismiss. Your taste, amplified.
-        </p>
-      </div>
-
-      <!-- Card 3: AI itinerary -->
-      <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
-            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-          </svg>
-        </div>
-        <span class="inline-block text-xs font-medium tracking-wide uppercase text-brand-coral mb-3">Let it click</span>
-        <h3 class="font-serif text-xl font-medium text-primary mb-3">
-          Your research, sharpened
-        </h3>
-        <p class="text-muted-foreground">
-          AI reads what you actually saved &mdash; not generic travel guides. It spots
-          patterns, flags gaps, and drafts a day-by-day itinerary you can shape
-          however you like. Starts with your research. Always.
-        </p>
-      </div>
-
-      <!-- Card 3: Collaborate -->
-      <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+      <!-- Collaborate -->
+      <div class="lg:col-span-5 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
@@ -91,9 +73,9 @@
       </div>
     </div>
 
-    <!-- Bottom row: 2 cards — delight and values -->
+    <!-- Bottom row: 2 cards -->
     <div class="grid gap-6 md:gap-8 sm:grid-cols-2 max-w-3xl mx-auto stagger-children">
-      <!-- Card 4: Discovery & recognition -->
+      <!-- Discovery & recognition -->
       <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-l-[3px] border-brand-coral/25 bg-brand-coral/[0.03] animate-on-scroll">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
@@ -112,7 +94,7 @@
         </p>
       </div>
 
-      <!-- Card 5: Attribution & credit -->
+      <!-- Attribution & credit -->
       <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-l-[3px] border-brand-coral/25 bg-brand-coral/[0.03] animate-on-scroll">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
