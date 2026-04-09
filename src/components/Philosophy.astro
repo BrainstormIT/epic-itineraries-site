@@ -8,51 +8,31 @@
       to come &mdash; that&rsquo;s yours. We just make sure you don&rsquo;t lose any of it.
     </p>
 
-    <!-- Asymmetric grid: hero card (left, 2 rows) + 2 cards stacked right -->
-    <div class="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-12 mb-6 md:mb-8 stagger-children">
+    <!-- Bento-box asymmetric grid — all 6 features with varying prominence -->
+    <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6 md:gap-8 stagger-children">
 
-      <!-- HERO: Research + Itinerary (merged) -->
-      <div class="md:col-span-2 lg:col-span-7 lg:row-span-2 rounded-[2rem] bg-brand-coral/[0.06] border-l-[6px] border-brand-coral p-8 lg:p-10 shadow-md hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
-            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-          </svg>
-        </div>
-        <span class="inline-block text-xs font-medium tracking-wide uppercase text-brand-coral mb-3">From finds to plans</span>
-        <h3 class="font-serif text-2xl lg:text-3xl font-medium text-primary mb-4">
-          Your taste runs the whole thing
-        </h3>
-        <p class="text-muted-foreground text-base lg:text-lg leading-relaxed">
-          Tell the research agent what you&rsquo;re after &mdash; best tapas in Barcelona,
-          rainy-day activities in Edinburgh, anything. It searches the web, scores what
-          it finds against your saves, and gets sharper the more you use it. When you&rsquo;re
-          ready, AI reads everything you&rsquo;ve collected and drafts a day-by-day itinerary
-          you can reshape however you like. Your research in, your trip out.
-        </p>
-      </div>
-
-      <!-- Save & organise -->
-      <div class="lg:col-span-5 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
+      <!-- Row 1: Hero card — Save it all (spans 2/3 on tablet, 8 cols on desktop) -->
+      <div class="md:col-span-4 lg:col-span-8 rounded-[2rem] bg-gradient-to-br from-brand-coral/[0.08] via-card to-card p-10 md:p-12 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-brand-coral/10 animate-on-scroll">
+        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-coral/15 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
             <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
             <line x1="12" x2="12" y1="7" y2="13"></line>
             <line x1="15" x2="9" y1="10" y2="10"></line>
           </svg>
         </div>
-        <span class="inline-block text-xs font-medium tracking-wide uppercase text-brand-coral mb-3">Hoard everything</span>
-        <h3 class="font-serif text-xl font-medium text-primary mb-3">
+        <span class="inline-block text-xs font-bold tracking-wider uppercase text-brand-coral mb-4">Hoard everything</span>
+        <h3 class="font-serif text-2xl md:text-3xl font-medium text-primary mb-4 leading-tight">
           Save it all. Lose nothing.
         </h3>
-        <p class="text-muted-foreground">
+        <p class="text-muted-foreground text-lg leading-relaxed max-w-2xl">
           Articles, blogs, hotel pages, restaurant reviews, that video your friend
           sent at midnight. Save links from any browser, any device, straight into
           collections organised by trip. Your research, finally in one place.
         </p>
       </div>
 
-      <!-- Collaborate -->
-      <div class="lg:col-span-5 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+      <!-- Row 1: Collaborate card (compact, spans 1/3 on tablet, 4 cols on desktop) -->
+      <div class="md:col-span-2 lg:col-span-4 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border border-border/50 animate-on-scroll">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
@@ -65,18 +45,57 @@
         <h3 class="font-serif text-xl font-medium text-primary mb-3">
           One trip, many treasure hunters
         </h3>
-        <p class="text-muted-foreground">
+        <p class="text-muted-foreground text-sm">
           Invite friends or family to co-build a collection. Everyone adds their
-          finds, everyone sees the full picture. That hostel your mate swears by?
-          Right next to the street food spot your partner found on TikTok.
+          finds, everyone sees the full picture.
         </p>
       </div>
-    </div>
 
-    <!-- Bottom row: 2 cards -->
-    <div class="grid gap-6 md:gap-8 sm:grid-cols-2 max-w-3xl mx-auto stagger-children">
-      <!-- Discovery & recognition -->
-      <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-l-[3px] border-brand-coral/25 bg-brand-coral/[0.03] animate-on-scroll">
+      <!-- Row 2: AI Planning card — prominent accent (spans half on mobile-tablet, 5 cols on desktop) -->
+      <div class="md:col-span-3 lg:col-span-5 rounded-[2rem] bg-gradient-to-br from-brand-coral/10 to-brand-coral/[0.03] p-10 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-brand-coral/40 animate-on-scroll relative overflow-hidden">
+        <!-- Decorative blur element -->
+        <div class="absolute -right-8 -top-8 w-32 h-32 bg-brand-coral/5 rounded-full blur-2xl"></div>
+        <div class="relative z-10">
+          <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-brand-coral/20 mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+            </svg>
+          </div>
+          <span class="inline-block text-xs font-bold tracking-wider uppercase text-brand-coral mb-3">Plan your way</span>
+          <h3 class="font-serif text-2xl font-medium text-primary mb-4 leading-tight">
+            Your finds. Mapped out.
+          </h3>
+          <p class="text-muted-foreground leading-relaxed">
+            Drag your saves into days yourself. Or tap a button and let AI structure
+            them &mdash; using only what you collected, nothing else. Swap things around,
+            add more, bin what doesn&rsquo;t fit. It&rsquo;s a starting point, not a straitjacket.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 2: Research agent (spans half on mobile-tablet, 4 cols on desktop) -->
+      <div class="md:col-span-3 lg:col-span-4 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+            <path d="M11 8v6"></path>
+            <path d="M8 11h6"></path>
+          </svg>
+        </div>
+        <span class="inline-block text-xs font-medium tracking-wide uppercase text-brand-coral mb-3">Research on autopilot</span>
+        <h3 class="font-serif text-xl font-medium text-primary mb-3">
+          An assistant that learns your taste
+        </h3>
+        <p class="text-muted-foreground">
+          Ask the research agent to find the best restaurants in Barcelona or things to do
+          with kids in Rome. It searches the web, scores what it finds, and gets better
+          the more you save and dismiss. Your taste, amplified.
+        </p>
+      </div>
+
+      <!-- Row 2/3: Finders keepers (compact, right-aligned, 3 cols on desktop) -->
+      <div class="md:col-span-3 lg:col-span-3 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-t-2 border-brand-coral/20 bg-brand-coral/[0.02] animate-on-scroll">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
             <circle cx="12" cy="8" r="6"></circle>
@@ -87,15 +106,14 @@
         <h3 class="font-serif text-xl font-medium text-primary mb-3">
           First to find it? That&rsquo;s yours.
         </h3>
-        <p class="text-muted-foreground">
+        <p class="text-muted-foreground text-sm">
           Spot a hidden gem before anyone else and you&rsquo;re credited as the
-          first discoverer. When other travellers save your finds, your curator
-          score climbs and badges follow. Your taste, recognised.
+          first discoverer. Your curator score climbs and badges follow.
         </p>
       </div>
 
-      <!-- Attribution & credit -->
-      <div class="rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-l-[3px] border-brand-coral/25 bg-brand-coral/[0.03] animate-on-scroll">
+      <!-- Row 3: Attribution card (compact, right-aligned to create asymmetry, 3 cols on desktop starting at col 10) -->
+      <div class="md:col-span-3 lg:col-span-3 lg:col-start-10 rounded-[2rem] bg-card p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-t-2 border-brand-coral/20 bg-brand-coral/[0.02] animate-on-scroll">
         <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-coral/10 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-coral" aria-hidden="true">
             <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
@@ -106,10 +124,9 @@
         <h3 class="font-serif text-xl font-medium text-primary mb-3">
           Every source stays visible
         </h3>
-        <p class="text-muted-foreground">
+        <p class="text-muted-foreground text-sm">
           The blogger who wrote the guide. The vlogger who filmed the walkthrough.
-          Every link traces back to its creator. Great travel content deserves to
-          be found &mdash; and its makers deserve the credit.
+          Every link traces back to its creator.
         </p>
       </div>
     </div>
