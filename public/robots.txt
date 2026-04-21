@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://epic-itineraries.com/sitemap-index.xml
+
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
